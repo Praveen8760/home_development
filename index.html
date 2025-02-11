@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./static/style/output.css">
+
+    <!-- fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap" rel="stylesheet"> -->
+
+
+</head>
+<body class="bg-white">
+
+    <section class="relative w-full">
+        <!-- Background Image (SVG) -->
+        <img src="./static/image/rect.svg" class="w-full h-auto" id="bg-image" alt="Background">
+    
+        <!-- Wrapper to match image height -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+            <h1 class="font-baloo text-[60px] font-bold lg:text-[60px]">Turning Maintenance into Magic</h1>
+            <p class="md:text-xl mt-4 lg:text-[36px]">Reliable, Effortless, Exceptional!</p>
+        </div>
+    
+        <!-- Navbar -->
+        <nav class="absolute top-0 left-0 w-full flex items-center px-6 py-4 pr-0 z-10">
+            <!-- Logo (Left) -->
+            <div class="ml-6">
+                <img src="./static/image/logo.png" alt="Logo" class="h-12">
+            </div>
+    
+            <!-- Navigation Links (Center) -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex space-x-8 text-white uppercase font-semibold">
+                <a href="#" class="hover:text-gray-300">Home</a>
+                <a href="#" class="hover:text-gray-300">Services</a>
+                <a href="#" class="hover:text-gray-300">Projects</a>
+                <a href="#" class="hover:text-gray-300">Gallery</a>
+            </div>
+    
+            <!-- Contact Button (Right) -->
+            <div class="ml-auto flex items-center space-x-5 mr-3">
+                <button id="menu-btn" class="text-white px-[26px] py-[12px] rounded-[160px] bg-accent focus:outline-none">
+                    Contact with Us
+                </button>
+    
+                <div class="bg-accent rounded-full w-12 h-12 flex items-center justify-center text-white text-lg p-3">
+                    <img src="./static/image/arrow-line.svg" alt="" class="w-full h-full object-contain">
+                </div>
+            </div>
+        </nav>
+    </section>
+    
+    
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center justify-evenly gap-6 p-6 lg:mt-5">
+    
+        <div class="flex flex-row space-x-5 w-64 items-center justify-evenly shadow-lg bg-white p-4 rounded-lg">
+            <img src="./static/image/hand.svg">
+            <div>
+                <p class="text-2xl font-bold text-gray-800">98%</p>
+                <p class="text-gray-600 text-sm">Customer Satisfaction</p>
+            </div>
+        </div>
+    
+        <div class="flex flex-row space-x-5 w-64 items-center justify-evenly shadow-lg bg-white p-4 rounded-lg">
+            <img src="./static/image/tools.svg">
+            <div>
+                <p class="text-2xl font-bold text-gray-800">97%</p>
+                <p class="text-gray-600 text-sm">Service Quality</p>
+            </div>
+        </div>
+    
+        <div class="flex flex-row space-x-5 w-64 items-center justify-evenly shadow-lg bg-white p-4 rounded-lg">
+            <img src="./static/image/power.svg">
+            <div>
+                <p class="text-2xl font-bold text-gray-800">99%</p>
+                <p class="text-gray-600 text-sm">Efficiency</p>
+            </div>
+        </div>
+    
+        <div class="flex flex-row space-x-5 w-64 items-center justify-evenly shadow-lg bg-white p-4 rounded-lg">
+            <img src="./static/image/coat.svg">
+            <div>
+                <p class="text-2xl font-bold text-gray-800">100%</p>
+                <p class="text-gray-600 text-sm">Professionalism</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- why section -->
+
+    <div class="lg:my-5 p-8">
+        <h1 class="text-accent text-[60px] font-bold">Why  Choose Us ? </h1>
+
+        <div class="flex space-x-20 justify-center items-center">
+            <p class="text-dark lg:text-[24px] text-justify">When it comes to property management, we offer a seamless experience that prioritizes your peace of mind. Our team of seasoned professionals is dedicated to providing reliable, high-quality maintenance services tailored to your unique needs. Whether it's routine upkeep or urgent repairs, we ensure every job is handled with care and efficiency. With transparent pricing, no hidden fees, and a commitment to timely responses, we work hard to maintain your property’s value and functionality. Trust us to be your go-to partner for stress-free property management that keeps your space in perfect condition year-round.</p>
+
+            <img src="./static/image/choose_us.svg" alt="choose_us-Image" >
+        </div>
+    </div>
+
+
+    <!-- gallery -->
+    <section>
+        <h1 class="text-accent text-[60px] font-bold text-center">Our Latest Projects</h1>
+        <div class="h-96 bg-red-200"></div>
+    </section>
+
+
+    <!-- works card -->
+    <section class="mt-5 p-8">
+        <div class="flex flex-col justify-center items-center">
+            <h3 class="text-dark lg:text-[32px]">All-in-one services</h3>
+            <h1 class="text-accent font-bold lg:text-[40px]">A Complete Range of Property Maintenance Services</h1>
+        </div>
+
+        <!-- cards -->
+        <section class="grid col-span-3 place-items-center grid-cols-3 lg:mt-8">
+            <div class="flex flex-col items-center lg:w-[360px] h-[360px] space-y-3">
+                <img src="./static/image/cleaning.svg" class="lg:w-[120px] h-[120px]">
+
+                <h1 class="text-dark text-[40px] font-bold">Cleaning</h1>
+
+                <p class="text-center">A clean home is a healthy home! Whether it's deep-cleaning your interiors or refreshing your outdoor spaces, we ensure a spotless and inviting environment. Say goodbye to dust, dirt, and grime with our professional cleaning services.</p>
+            </div>
+
+            <div class="flex flex-col items-center lg:w-[360px] h-[360px] space-y-3">
+                <img src="./static/image/plumbing.svg" class="lg:w-[120px] h-[120px]">
+
+                <h1 class="text-dark text-[40px] font-bold">Plumbing</h1>
+
+                <p class="text-center">Leaky faucets? Clogged drains? Plumbing issues can be a real hassle. Our expert plumbers handle everything from minor fixes to major pipework, ensuring a smooth and efficient water system in your home.</p>
+            </div>
+
+
+            <div class="flex flex-col items-center lg:w-[360px] h-[360px] space-y-3">
+                <img src="./static/image/repair.svg" class="lg:w-[120px] h-[120px]">
+
+                <h1 class="text-dark text-[40px] font-bold">Repair works</h1>
+
+                <p class="text-center">Small damages can lead to bigger problems if ignored. We provide quick and reliable repair services for fans, bulbs, fixtures, and more—helping you keep your home in perfect working order.</p>
+            </div>
+
+
+            <div class="flex flex-col items-center lg:w-[360px] h-[360px] space-y-3">
+                <img src="./static/image/carpenter.svg" class="lg:w-[120px] h-[120px]">
+
+                <h1 class="text-dark text-[40px] font-bold">Carpenter</h1>
+
+                <p class="text-center">From fixing broken furniture to custom woodwork, our skilled carpenters bring precision and quality to every project. Whether you need repairs or new installations, we’ve got you covered.</p>
+            </div>
+
+            <div class="flex flex-col items-center lg:w-[360px] h-[360px] space-y-3">
+                <img src="./static/image/electrical.svg" class="lg:w-[120px] h-[120px]">
+
+                <h1 class="text-dark text-[40px] font-bold">Electrics</h1>
+
+                <p class="text-center">Faulty wiring or flickering lights? Electrical issues can be dangerous if left unchecked. Our expert electricians handle installations, repairs, and maintenance to keep your home safe and powered up.</p>
+            </div>
+
+
+            <div class="flex flex-col items-center lg:w-[360px] h-[360px] space-y-3">
+                <img src="./static/image/refurbishment.svg" class="lg:w-[120px] h-[120px]">
+
+                <h1 class="text-dark text-[40px] font-bold">Refurbishment work</h1>
+
+                <p class="text-center">Looking to upgrade your space? Whether it’s a minor touch-up or a full renovation, our refurbishment services help transform your property into something fresh, modern, and functional.</p>
+            </div>
+        </section>
+    </section>
+
+    <!-- gallery (/before / after section ) -->
+    <section class="h-96 bg-green-300">
+        <h1 class="text-[50px] text-center font-bold">Gallery</h1>
+    </section>
+
+
+    <footer class="h-80 bg-blue-300">
+        <h1 class="text-white text-[60px] font-bold text-center">footer</h1>
+    </footer>
+
+
+</body>
+</html>

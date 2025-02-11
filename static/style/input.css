@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Baloo Bhaijaan 2";
+    src: url("../fonts/BalooBhaijaan2-VariableFont_wght.ttf") format("truetype");
+
+}
