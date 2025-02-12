@@ -7,6 +7,7 @@
     <title>Document</title>
     
     <link rel="stylesheet" href="./static/style/output.css">
+    <link rel="stylesheet" href="./static/style/main.css">
 
     <!-- fonts -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,86 +16,107 @@
 
 
 </head>
-<body class="bg-white">
+<body class="bg-white overflow-x-hidden">
 
-    <section class="relative w-full">
-        <!-- Background Image (SVG) -->
-        <img src="./static/image/rect.svg" class="w-full h-auto" id="bg-image" alt="Background">
-    
-        <!-- Wrapper to match image height -->
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-            <h1 class="font-baloo text-[60px] font-bold lg:text-[60px]">Turning Maintenance into Magic</h1>
-            <p class="md:text-xl mt-4 lg:text-[36px]">Reliable, Effortless, Exceptional!</p>
-        </div>
-    
-        <!-- Navbar -->
-        <nav class="absolute top-0 left-0 w-full flex items-center px-6 py-4 pr-0 z-10">
-            <!-- Logo (Left) -->
-            <div class="ml-6">
-                <img src="./static/image/logo.svg" alt="Logo" class="h-12">
+    <!-- Navbar (Fixed in Mobile, Overlapping in Desktop) -->
+    <!-- Navbar -->
+    <nav class="w-full px-6 py-4 z-20 fixed top-0 md:absolute md:bg-transparent bg-white shadow-md md:shadow-none">
+        <div class="flex items-center justify-between">
+            
+            <!-- Logo -->
+            <div>
+                <img src="./static/image/logo.svg" alt="Logo" class="h-8 lg:h-12">
             </div>
-    
-            <!-- Navigation Links (Center) -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex space-x-8 text-white uppercase font-semibold">
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8 text-dark md:text-white uppercase font-semibold absolute left-1/2 transform -translate-x-1/2">
                 <a href="#" class="hover:text-gray-300">Home</a>
                 <a href="#" class="hover:text-gray-300">Services</a>
                 <a href="#" class="hover:text-gray-300">Projects</a>
                 <a href="#" class="hover:text-gray-300">Gallery</a>
             </div>
-    
-            <!-- Contact Button (Right) -->
-            <div class="ml-auto flex items-center space-x-5 mr-3">
-                <button id="menu-btn" class="text-white px-[26px] py-[12px] rounded-[160px] bg-accent focus:outline-none">
+
+            <!-- Contact Button (Only for Desktop) -->
+            <div class="hidden md:flex ml-auto items-center space-x-5 mr-3">
+                <button class="text-white px-[26px] py-[12px] rounded-[160px] bg-accent focus:outline-none">
                     Contact with Us
                 </button>
-    
                 <div class="bg-accent rounded-full w-12 h-12 flex items-center justify-center text-white text-lg p-3">
                     <img src="./static/image/arrow-line.svg" alt="" class="w-full h-full object-contain">
                 </div>
             </div>
-        </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-dark focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Collapsible Menu -->
+        <div id="mobile-menu" class="flex flex-col items-center space-y-4 py-4 text-accent md:hidden transition-all duration-300">
+            <a href="#" class="hover:text-gray-300">Home</a>
+            <a href="#" class="hover:text-gray-300">Services</a>
+            <a href="#" class="hover:text-gray-300">Projects</a>
+            <a href="#" class="hover:text-gray-300">Gallery</a>
+        </div>
+    </nav>
+
+    <!-- Section (Image Moves Down in Mobile) -->
+    <section class="relative w-full mt-[60px] md:mt-0">
+        <!-- Background Images -->
+        <img src="./static/image/home.jpg" class="w-full h-auto sm:hidden mt-[70px] md:mt-0" id="bg-image-mobile" alt="Background Mobile">
+        <img src="./static/image/rect.svg" class="w-full h-auto hidden sm:block" id="bg-image-desktop" alt="Background Desktop">
+
+        <!-- Wrapper to match image height -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+            <h1 class="font-baloo text-[30px] font-bold lg:text-[60px]">Turning Maintenance into Magic</h1>
+            <p class="md:text-xl mt-4 lg:text-[36px]">Reliable, Effortless, Exceptional!</p>
+        </div>
     </section>
-    
-    
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:flex items-center justify-evenly gap-6 p-6 lg:mt-5">
-    
-        <div class="flex flex-row space-x-5 w-64 items-center justify-evenly shadow-lg bg-white p-4 rounded-lg">
-            <img src="./static/image/hand.svg">
+
+    <!-- static card -->
+
+    <section class="grid grid-cols-2 sm:grid-cols-2 lg:flex items-center justify-evenly gap-6 p-6 lg:mt-5">
+        <div class="flex flex-row space-x-5 w-full items-center justify-evenly shadow-lg bg-white p-4 rounded-lg lg:w-64">
+            <img src="./static/image/hand.svg" class="w-12 h-12 lg:w-auto lg:h-auto">
             <div>
-                <p class="text-2xl font-bold text-gray-800">98%</p>
+                <p class="text-[14px] font-bold text-gray-800 lg:text-2xl">98%</p>
                 <p class="text-gray-600 text-sm">Customer Satisfaction</p>
             </div>
         </div>
     
-        <div class="flex flex-row space-x-5 w-64 items-center justify-evenly shadow-lg bg-white p-4 rounded-lg">
-            <img src="./static/image/tools.svg">
+        <div class="flex flex-row space-x-5 w-full items-center justify-evenly shadow-lg bg-white p-4 rounded-lg lg:w-64">
+            <img src="./static/image/tools.svg" class="w-12 h-12 lg:w-auto lg:h-auto">
             <div>
-                <p class="text-2xl font-bold text-gray-800">97%</p>
+                <p class="text-[14px] font-bold text-gray-800 lg:text-2xl">97%</p>
                 <p class="text-gray-600 text-sm">Service Quality</p>
             </div>
         </div>
     
-        <div class="flex flex-row space-x-5 w-64 items-center justify-evenly shadow-lg bg-white p-4 rounded-lg">
-            <img src="./static/image/power.svg">
+        <div class="flex flex-row space-x-5 w-full items-center justify-evenly shadow-lg bg-white p-4 rounded-lg lg:w-64">
+            <img src="./static/image/power.svg" class="w-12 h-12 lg:w-auto lg:h-auto">
             <div>
-                <p class="text-2xl font-bold text-gray-800">99%</p>
+                <p class="text-[14px] font-bold text-gray-800 lg:text-2xl">99%</p>
                 <p class="text-gray-600 text-sm">Efficiency</p>
             </div>
         </div>
     
-        <div class="flex flex-row space-x-5 w-64 items-center justify-evenly shadow-lg bg-white p-4 rounded-lg">
-            <img src="./static/image/coat.svg">
+        <div class="flex flex-row space-x-5 w-full items-center justify-evenly shadow-lg bg-white p-4 rounded-lg lg:w-64">
+            <img src="./static/image/coat.svg" class="w-12 h-12 lg:w-auto lg:h-auto">
             <div>
-                <p class="text-2xl font-bold text-gray-800">100%</p>
+                <p class="text-[14px] font-bold text-gray-800 lg:text-2xl">100%</p>
                 <p class="text-gray-600 text-sm">Professionalism</p>
             </div>
         </div>
     </section>
+    
 
 
     <!-- why section -->
 
-    <div class="lg:my-5 p-8">
+    <!-- <div class="lg:my-5 p-8">
         <h1 class="text-accent text-[60px] font-bold">Why  Choose Us ? </h1>
 
         <div class="flex space-x-20 justify-center items-center">
@@ -102,7 +124,29 @@
 
             <img src="./static/image/choose_us.svg" alt="choose_us-Image" >
         </div>
+    </div> -->
+
+    <div class="lg:my-5 p-6 sm:p-8">
+        <!-- Title -->
+        <h1 class="text-accent text-4xl sm:text-5xl lg:text-6xl font-bold text-center">
+            Why Choose Us?
+        </h1>
+    
+        <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-20 mt-6 lg:mt-10">
+            <!-- Image -->
+            <img src="./static/image/choose_us.svg" 
+                 alt="Choose Us Image" 
+                 class="w-80 sm:w-64 lg:w-[600px]">
+    
+            <!-- Description -->
+            <p class="text-dark text-base sm:text-lg lg:text-xl text-justify">
+                When it comes to property management, we offer a seamless experience that prioritizes your peace of mind. Our team of seasoned professionals is dedicated to providing reliable, high-quality maintenance services tailored to your unique needs. Whether it's routine upkeep or urgent repairs, we ensure every job is handled with care and efficiency. With transparent pricing, no hidden fees, and a commitment to timely responses, we work hard to maintain your property’s value and functionality. Trust us to be your go-to partner for stress-free property management that keeps your space in perfect condition year-round.
+            </p>
+        </div>
     </div>
+    
+    
+    
 
 
     <!-- gallery -->
@@ -112,67 +156,78 @@
     </section>
 
 
-    <!-- works card -->
     <section class="mt-5 p-8">
         <div class="flex flex-col justify-center items-center">
-            <h3 class="text-dark lg:text-[32px]">All-in-one services</h3>
-            <h1 class="text-accent font-bold lg:text-[40px]">A Complete Range of Property Maintenance Services</h1>
+            <h3 class="text-dark text-xl lg:text-[32px]">All-in-one services</h3>
+            <h1 class="text-accent font-bold text-2xl lg:text-[40px] text-center">
+                A Complete Range of Property Maintenance Services
+            </h1>
         </div>
-
-        <!-- cards -->
-        <section class="grid col-span-3 place-items-center grid-cols-3 lg:mt-8">
-            <div class="flex flex-col items-center lg:w-[360px] h-[360px] space-y-3">
-                <img src="./static/image/cleaning.svg" class="lg:w-[120px] h-[120px]">
-
-                <h1 class="text-dark text-[40px] font-bold">Cleaning</h1>
-
-                <p class="text-center">A clean home is a healthy home! Whether it's deep-cleaning your interiors or refreshing your outdoor spaces, we ensure a spotless and inviting environment. Say goodbye to dust, dirt, and grime with our professional cleaning services.</p>
+    
+        <!-- Cards Section -->
+        <section class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center lg:mt-8">
+            <!-- First 3 Cards (Always Visible) -->
+            <div class="flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
+                <img src="./static/image/cleaning.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
+                <h1 class="text-dark text-2xl lg:text-[40px] font-bold">Cleaning</h1>
+                <p class="text-center text-sm lg:text-base">
+                    A clean home is a healthy home! Whether it's deep-cleaning your interiors or refreshing your outdoor spaces, we ensure a spotless and inviting environment.
+                </p>
             </div>
-
-            <div class="flex flex-col items-center lg:w-[360px] h-[360px] space-y-3">
-                <img src="./static/image/plumbing.svg" class="lg:w-[120px] h-[120px]">
-
-                <h1 class="text-dark text-[40px] font-bold">Plumbing</h1>
-
-                <p class="text-center">Leaky faucets? Clogged drains? Plumbing issues can be a real hassle. Our expert plumbers handle everything from minor fixes to major pipework, ensuring a smooth and efficient water system in your home.</p>
+    
+            <div class="flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
+                <img src="./static/image/plumbing.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
+                <h1 class="text-dark text-2xl lg:text-[40px] font-bold">Plumbing</h1>
+                <p class="text-center text-sm lg:text-base">
+                    Leaky faucets? Clogged drains? Plumbing issues can be a real hassle. Our expert plumbers handle everything from minor fixes to major pipework.
+                </p>
             </div>
-
-
-            <div class="flex flex-col items-center lg:w-[360px] h-[360px] space-y-3">
-                <img src="./static/image/repair.svg" class="lg:w-[120px] h-[120px]">
-
-                <h1 class="text-dark text-[40px] font-bold">Repair works</h1>
-
-                <p class="text-center">Small damages can lead to bigger problems if ignored. We provide quick and reliable repair services for fans, bulbs, fixtures, and more—helping you keep your home in perfect working order.</p>
+    
+            <div class="flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
+                <img src="./static/image/repair.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
+                <h1 class="text-dark text-2xl lg:text-[40px] font-bold">Repair Works</h1>
+                <p class="text-center text-sm lg:text-base">
+                    Small damages can lead to bigger problems if ignored. We provide quick and reliable repair services for fans, bulbs, fixtures, and more.
+                </p>
             </div>
-
-
-            <div class="flex flex-col items-center lg:w-[360px] h-[360px] space-y-3">
-                <img src="./static/image/carpenter.svg" class="lg:w-[120px] h-[120px]">
-
-                <h1 class="text-dark text-[40px] font-bold">Carpenter</h1>
-
-                <p class="text-center">From fixing broken furniture to custom woodwork, our skilled carpenters bring precision and quality to every project. Whether you need repairs or new installations, we’ve got you covered.</p>
-            </div>
-
-            <div class="flex flex-col items-center lg:w-[360px] h-[360px] space-y-3">
-                <img src="./static/image/electrical.svg" class="lg:w-[120px] h-[120px]">
-
-                <h1 class="text-dark text-[40px] font-bold">Electrics</h1>
-
-                <p class="text-center">Faulty wiring or flickering lights? Electrical issues can be dangerous if left unchecked. Our expert electricians handle installations, repairs, and maintenance to keep your home safe and powered up.</p>
-            </div>
-
-
-            <div class="flex flex-col items-center lg:w-[360px] h-[360px] space-y-3">
-                <img src="./static/image/refurbishment.svg" class="lg:w-[120px] h-[120px]">
-
-                <h1 class="text-dark text-[40px] font-bold">Refurbishment work</h1>
-
-                <p class="text-center">Looking to upgrade your space? Whether it’s a minor touch-up or a full renovation, our refurbishment services help transform your property into something fresh, modern, and functional.</p>
+    
+            <!-- Last 3 Cards (Hidden on Mobile, Visible on Desktop) -->
+            <div id="more-cards" class="hidden lg:grid lg:grid-cols-3 lg:col-span-3 lg:justify-items-center gap-6 w-full">
+                <div class="flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
+                    <img src="./static/image/carpenter.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
+                    <h1 class="text-dark text-2xl lg:text-[40px] font-bold">Carpenter</h1>
+                    <p class="text-center text-sm lg:text-base">
+                        From fixing broken furniture to custom woodwork, our skilled carpenters bring precision and quality to every project.
+                    </p>
+                </div>
+    
+                <div class="flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
+                    <img src="./static/image/electrical.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
+                    <h1 class="text-dark text-2xl lg:text-[40px] font-bold">Electrics</h1>
+                    <p class="text-center text-sm lg:text-base">
+                        Electrical issues can be dangerous if left unchecked. Our expert electricians handle installations, repairs, and maintenance.
+                    </p>
+                </div>
+    
+                <div class="flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
+                    <img src="./static/image/refurbishment.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
+                    <h1 class="text-dark text-2xl lg:text-[40px] font-bold">Refurbishment</h1>
+                    <p class="text-center text-sm lg:text-base">
+                        Whether it’s a minor touch-up or a full renovation, our refurbishment services help transform your property into something fresh and modern.
+                    </p>
+                </div>
             </div>
         </section>
+    
+        <!-- More Button (Only for Mobile) -->
+        <div class="flex justify-center mt-6 lg:hidden">
+            <button id="show-more-btn" class="px-6 py-3 bg-accent text-white rounded-full text-lg shadow-md">
+                More Services
+            </button>
+        </div>
     </section>
+    
+
 
     <!-- gallery (/before / after section ) -->
     <section class="h-96 bg-green-300">
@@ -180,15 +235,62 @@
     </section>
 
 
-    <footer class="grid  grid-cols-2 col-span-2 bg-accent text-white p-7">
+    <!-- before / after section -->
+    <h1 class="text-center text-[60px] font-bold">Before / After</h1>
+
+    <section class="grid mt-3 grid-cols-1 md:grid-cols-3 gap-6 px-7 justify-center">
+        <!-- Card 1 -->
+        <div class="container relative w-40 md:w-52 h-48 md:h-56 overflow-hidden">
+            <div class="image-wrapper absolute inset-0">
+                <img src="./static/image/home.jpg" class="grayscale w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="image-wrapper foreground-img absolute inset-0 overflow-hidden" style="width: 50%;">
+                <img src="./static/image/electrical.svg" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <!-- Slider -->
+            <div class="slider-bar absolute top-0 bottom-0 left-1/2 w-[2px] bg-white"></div>
+            <div class="slider-button absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-white rounded-full cursor-pointer"></div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="container relative w-40 md:w-52 h-48 md:h-56 overflow-hidden">
+            <div class="image-wrapper absolute inset-0">
+                <img src="./static/image/home.jpg" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="image-wrapper foreground-img absolute inset-0 overflow-hidden" style="width: 50%;">
+                <img src="./static/image/electrical.svg" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <!-- Slider -->
+            <div class="slider-bar absolute top-0 bottom-0 left-1/2 w-[2px] bg-white"></div>
+            <div class="slider-button absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-white rounded-full cursor-pointer"></div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="container relative w-40 md:w-52 h-48 md:h-56 overflow-hidden">
+            <div class="image-wrapper absolute inset-0">
+                <img src="./static/image/home.jpg" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="image-wrapper foreground-img absolute inset-0 overflow-hidden" style="width: 50%;">
+                <img src="./static/image/electrical.svg" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <!-- Slider -->
+            <div class="slider-bar absolute top-0 bottom-0 left-1/2 w-[2px] bg-white"></div>
+            <div class="slider-button absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-white rounded-full cursor-pointer"></div>
+        </div>
+    </section>
+    
+    
+    
+
+    <footer class="mt-5 grid grid-cols-1 col-span-1 bg-accent text-white pt-5 rounded-t-[30px] lg:grid-cols-2 lg:col-span-2">
         <!-- left -->
-        <div class="flex flex-col space-y-5">
+        <div class="p-7 justify-items-center lg:justify-items-start">
             <!-- footer logo -->
-            <img src="./static/image/logo.svg" class="w-60 h-60">
-            <p class="w-3/4">At JS & Daughters Property Management, we specialize in comprehensive cleaning, repairs, and home upgrades. Our dedicated team ensures your property is well-maintained and inviting, delivering exceptional service every time.
+            <img src="./static/image/logo.svg" class="">
+            <p class="w-3/4 text-justify hidden lg:block">At JS & Daughters Property Management, we specialize in comprehensive cleaning, repairs, and home upgrades. Our dedicated team ensures your property is well-maintained and inviting, delivering exceptional service every time.
             </p>
             <!-- location -->
-            <div class="grid grid-cols-2 col-span-2">
+            <div class="grid grid-cols-2 col-span-2 space-x-20 mt-3 lg:mt-5">
                 <ul>
                     <li class="font-bold">Contact us</li>
                     <li>+91 98993 43522</li>
@@ -203,43 +305,104 @@
         </div>
 
         <!-- right -->
-        <div class="place-items-center">
+        <div class="mr-0 place-items-end">
             <!-- footer navbar -->
-            <svg width="637" height="431" viewBox="0 0 637 431" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 127C1 118.583 1.00078 112.33 1.4054 107.377C1.80908 102.437 2.60971 98.8785 4.16081 95.8343C6.94114 90.3776 11.3776 85.9411 16.8343 83.1608C19.8785 81.6097 23.4368 80.8091 28.3775 80.4054C33.3299 80.0008 39.5827 80 48 80H472H472.209C480.845 80.0001 485.375 80.0001 489.131 79.0462C500.147 76.2485 508.748 67.6467 511.546 56.6308C512.5 52.8746 512.5 48.345 512.5 39.7088V39.5C512.5 30.6056 512.508 26.3445 513.392 22.8616C516.01 12.5563 524.056 4.50951 534.362 1.8923C537.844 1.00776 542.106 1 551 1H617C625.417 1 631.67 1.00078 636.622 1.4054C641.563 1.80908 645.122 2.60971 648.166 4.16081C653.622 6.94114 658.059 11.3776 660.839 16.8343C662.39 19.8785 663.191 23.4368 663.595 28.3775C663.999 33.3299 664 39.5827 664 48V434H1V127Z" stroke="#881415" stroke-width="2"/>
+            <svg class="hidden lg:block" width="564" height="288" viewBox="0 0 564 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M564 1.56299L361.55 1.56299C350.487 1.56299 341.519 10.531 341.519 21.5935V30.2734C341.519 41.336 332.551 50.304 321.489 50.304L21.0305 50.304C9.96797 50.304 1 59.272 1 70.3346V288" stroke="#881415" stroke-width="1.33537"/>
+            
+                <!-- Centered Footer Content -->
+                <foreignObject x="20" y="70" width="540" height="120">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; font-family: Arial, sans-serif;">
+                        
+                        <!-- Navigation Menu -->
+                        <ul style="display: flex; justify-content: center; gap: 30px; list-style: none; padding: 0; margin: 10px 0; font-size: 18px; font-weight: bold;">
+                            <li>HOME</li>
+                            <li>SERVICES</li>
+                            <li>PROJECT</li>
+                            <li>ABOUT US</li>
+                        </ul>
+            
+                        <!-- Social Media Icons -->
+                        <ul style="display: flex; justify-content: center; gap: 20px; list-style: none; padding: 0; margin-top: 10px;">
+                            <li><img src="./static/image/whatsapp.svg" width="40" height="40"></li>
+                            <li><img src="/static/image/facebook.svg" width="40" height="40"></li>
+                            <li><img src="/static/image/insta.svg" width="40" height="40"></li>
+                            <li><img src="/static/image/telgram.svg" width="40" height="40"></li>
+                        </ul>
+                    </div>
+                </foreignObject> 
             </svg>
-                
-                
-            <div class="space-y-4">
-                <div>
-                    <ul class="flex flex-row space-x-4">
-                        <li>HOME</li>
-                        <li>SERVICES</li>
-                        <li>PROJECT</li>
-                        <li>ABOUT US</li>
-                    </ul>
-                </div>
-
-                 <!-- social media -->
-                <div>
-                    <ul class="flex justify-center flex-row space-x-4">
-                        <li>
-                            <img src="./static/image/whatsapp.svg" class="w-12 h-12">
-                        </li>
-                        <li>
-                            <img src="/static/image/facebook.svg" class="w-12 h-12">
-                        </li>
-                        <li>
-                            <img src="/static/image/insta.svg" class="w-12 h-12">
-                        </li>
-                        <li>
-                            <img src="/static/image/telgram.svg" class="w-12 h-12">
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            
         </div>
     </footer>
+
+
+
+        <!-- JavaScript for Mobile Menu -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+    
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+
+    <!-- Script for Toggle More Cards on Mobile -->
+    <script>
+        document.getElementById("show-more-btn").addEventListener("click", function () {
+            const moreCards = document.getElementById("more-cards");
+            if (moreCards.classList.contains("hidden")) {
+                moreCards.classList.remove("hidden");
+                moreCards.classList.add("grid");
+                this.innerText = "Show Less";
+            } else {
+                moreCards.classList.remove("grid");
+                moreCards.classList.add("hidden");
+                this.innerText = "More Services";
+            }
+        });
+    </script>
+
+
+    <!-- before / after -->
+    <script>
+        document.querySelectorAll(".container").forEach(container => {
+            const sliderButton = container.querySelector(".slider-button");
+            const foreground = container.querySelector(".foreground-img");
+            const sliderBar = container.querySelector(".slider-bar");
+        
+            let isDragging = false;
+        
+            sliderButton.addEventListener("mousedown", (e) => {
+                isDragging = true;
+                document.body.style.userSelect = "none"; // Prevents text selection while dragging
+            });
+        
+            document.addEventListener("mousemove", (e) => {
+                if (!isDragging) return;
+        
+                const rect = container.getBoundingClientRect();
+                let offsetX = e.clientX - rect.left;
+        
+                if (offsetX < 0) offsetX = 0;
+                if (offsetX > rect.width) offsetX = rect.width;
+        
+                let percent = (offsetX / rect.width) * 100;
+        
+                foreground.style.width = `${percent}%`;
+                sliderButton.style.left = `${percent}%`;
+                sliderBar.style.left = `${percent}%`;
+            });
+        
+            document.addEventListener("mouseup", () => {
+                isDragging = false;
+                document.body.style.userSelect = "";
+            });
+        });
+
+    </script>
 
 
 </body>
