@@ -1,10 +1,37 @@
+@font-face {
+    font-family: 'ballo';
+    src: url('/static/fonts/Baloo2-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lora';
+    src: url('/static/fonts/Lora-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'molengo';
+    src: url('/static/fonts/Molengo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.font-ballo {
+    font-family: 'ballo', sans-serif;
+}
 
-@font-face {
-    font-family: "Baloo Bhaijaan 2";
-    src: url("../fonts/BalooBhaijaan2-VariableFont_wght.ttf") format("truetype");
+.font-lora {
+    font-family: 'lora', sans-serif;
+}
 
+.font-molengo {
+    font-family: 'molengo', sans-serif;
 }

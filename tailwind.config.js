@@ -7,8 +7,11 @@
   theme: {
     extend: {
       fontFamily: {
-        baloo: ["Baloo Bhaijaan 2"],
+        ballo: ["ballo", "sans-serif"], // Register the font
+        lora: ["lora", "sans-serif"],
+        molengo: ["molengo", "sans-serif"],
       },
+      
       colors:{
         "primary":"#881415",
         "secondary":"#FDF852",

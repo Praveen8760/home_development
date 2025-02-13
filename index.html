@@ -12,9 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.0/flowbite.min.js"></script>
 
     <!-- fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap" rel="stylesheet"> -->
+
 
 
 </head>
@@ -22,7 +20,7 @@
 
     <!-- Navbar (Fixed in Mobile, Overlapping in Desktop) -->
     <!-- Navbar -->
-    <nav class="w-full px-6 py-4 z-20 fixed top-0 md:absolute md:bg-transparent bg-white shadow-md md:shadow-none">
+    <nav class="w-full px-6 py-4 pr-0 z-20 fixed top-0 md:absolute md:bg-transparent bg-white shadow-md md:shadow-none">
         <div class="flex items-center justify-between">
             
             <!-- Logo -->
@@ -31,7 +29,7 @@
             </div>
 
             <!-- Desktop Navigation -->
-            <div class="hidden md:flex space-x-8 text-dark md:text-white uppercase font-semibold absolute left-1/2 transform -translate-x-1/2">
+            <div class="font-semibold hidden font-ballo tracking-widest md:flex space-x-8 text-dark md:text-white uppercase absolute left-1/2 transform -translate-x-1/2">
                 <a href="#" class="hover:text-gray-300">Home</a>
                 <a href="#" class="hover:text-gray-300">Services</a>
                 <a href="#" class="hover:text-gray-300">Projects</a>
@@ -40,7 +38,7 @@
 
             <!-- Contact Button (Only for Desktop) -->
             <div class="hidden md:flex ml-auto items-center space-x-5 mr-3">
-                <button class="text-white px-[26px] py-[12px] rounded-[160px] bg-accent focus:outline-none">
+                <button class="font-semibold font-ballo text-white px-[26px] py-[12px] rounded-[160px] bg-accent focus:outline-none">
                     Contact with Us
                 </button>
                 <div class="bg-accent rounded-full w-12 h-12 flex items-center justify-center text-white text-lg p-3">
@@ -50,19 +48,30 @@
 
             <!-- Mobile Menu Button -->
             <button id="menu-btn" class="md:hidden text-dark focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-8 h-8" fill="none" stroke="#282A36" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </div>
 
         <!-- Mobile Collapsible Menu -->
-        <div id="mobile-menu" class="flex flex-col items-center space-y-4 py-4 text-accent md:hidden transition-all duration-300">
-            <a href="#" class="hover:text-gray-300">Home</a>
-            <a href="#" class="hover:text-gray-300">Services</a>
-            <a href="#" class="hover:text-gray-300">Projects</a>
-            <a href="#" class="hover:text-gray-300">Gallery</a>
+        <div id="mobile-menu" class="hidden flex-col items-center space-y-4 py-6  text-accent md:hidden w-full rounded-lg  transition-all duration-300">
+            <ul class="flex mt-2 flex-col justify-center items-center rounded-lg space-y-4 w-full">
+                <li class="w-full text-center">
+                    <a href="#" class="block w-full py-2 text-lg font-medium hover:bg-gray-800 hover:text-white transition duration-300 rounded-md hover:scale-110">Home</a>
+                </li>
+                <li class="w-full text-center">
+                    <a href="#" class="block w-full py-2 text-lg font-medium hover:bg-gray-800 hover:text-white transition duration-300 rounded-md hover:scale-110">Services</a>
+                </li>
+                <li class="w-full text-center">
+                    <a href="#" class="block w-full py-2 text-lg font-medium hover:bg-gray-800 hover:text-white transition duration-300 rounded-md hover:scale-110">Projects</a>
+                </li>
+                <li class="w-full text-center">
+                    <a href="#" class="block w-full py-2 text-lg font-medium hover:bg-gray-800 hover:text-white transition duration-300 rounded-md hover:scale-110">Gallery</a>
+                </li>
+            </ul>
         </div>
+        
     </nav>
 
     <!-- Section (Image Moves Down in Mobile) -->
@@ -73,12 +82,10 @@
 
         <!-- Wrapper to match image height -->
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-            <h1 class="font-baloo text-[30px] font-bold lg:text-[60px]">Turning Maintenance into Magic</h1>
-            <p class="md:text-xl mt-4 lg:text-[36px]">Reliable, Effortless, Exceptional!</p>
+            <h1 class="font-ballo text-[30px] font-bold lg:text-[60px]">Turning Maintenance into Magic</h1>
+            <p class="font-molengo md:text-xl lg:mt-4 lg:text-[36px]">Reliable, Effortless, Exceptional!</p>
         </div>
     </section>
-
-    <!-- static card -->
 
     <section class="grid grid-cols-2 sm:grid-cols-2 lg:flex items-center justify-evenly gap-6 p-6 lg:mt-5">
         <div class="flex flex-row space-x-5 w-full items-center justify-evenly shadow-lg bg-white p-4 rounded-lg lg:w-64">
@@ -118,18 +125,18 @@
 
     <div class="lg:my-5 p-6 sm:p-8">
         <!-- Title -->
-        <h1 class="text-accent text-4xl sm:text-5xl lg:text-6xl font-bold text-center md:text-start">
+        <h1 class="font-lora text-accent text-4xl sm:text-5xl lg:text-6xl font-bold text-center md:text-start">
             Why Choose Us?
         </h1>
     
-        <div class="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-20 mt-6 lg:mt-10">
+        <div class="flex flex-col lg:flex-row-reverse justify-between items-center gap-6 lg:gap-20 mt-6 lg:mt-10">
             <!-- Image -->
             <img src="./static/image/choose_us.svg" 
                  alt="Choose Us Image" 
-                 class="w-80 sm:w-64 lg:w-[600px]">
+                 class="w-80 sm:w-64 lg:w-[400px]">
     
             <!-- Description -->
-            <p class="text-dark text-base sm:text-lg lg:text-xl text-justify">
+            <p class="font-ballo text-dark sm:text-lg lg:w-1/2 lg:text-[25px] lg:self-start text-justify font-normal leading-5">
                 When it comes to property management, we offer a seamless experience that prioritizes your peace of mind. Our team of seasoned professionals is dedicated to providing reliable, high-quality maintenance services tailored to your unique needs. Whether it's routine upkeep or urgent repairs, we ensure every job is handled with care and efficiency. With transparent pricing, no hidden fees, and a commitment to timely responses, we work hard to maintain your property’s value and functionality. Trust us to be your go-to partner for stress-free property management that keeps your space in perfect condition year-round.
             </p>
         </div>
@@ -141,7 +148,7 @@
 
     <!-- gallery -->
     <section>
-        <h1 class="text-accent text-[40px] font-bold text-center lg:text-[60px]">Our Latest Projects</h1>
+        <h1 class="text-accent text-[40px] font-bold text-center lg:text-[60px] font-lora">Our Latest Projects</h1>
         
         <div class="hidden justify-stretch items-center mx-10 px-10 max-w-[1400px] lg:mt-4 lg:flex">
             <svg width="100%" height="full" viewBox="0 0 1407 625" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -237,10 +244,10 @@
     </section>
 
 
-    <section class="mt-5 p-8">
-        <div class="flex flex-col justify-center items-center">
-            <h3 class="text-dark text-xl lg:text-[32px]">All-in-one services</h3>
-            <h1 class="text-accent font-bold text-2xl lg:text-[40px] text-center">
+    <section class="mt-4 p-8 lg:mt-7">
+        <div class="flex flex-col space-y-3 justify-center items-center">
+            <h3 class="text-dark text-xl lg:text-[32px] font-ballo">All-in-one services</h3>
+            <h1 class="text-accent font-extrabold text-2xl lg:text-[36px] text-center font-lora">
                 A Complete Range of Property Maintenance Services
             </h1>
         </div>
@@ -250,24 +257,24 @@
             <!-- First 3 Cards (Always Visible) -->
             <div class="flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/cleaning.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
-                <h1 class="text-dark text-2xl lg:text-[40px] font-bold">Cleaning</h1>
-                <p class="text-center text-sm lg:text-base">
+                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Cleaning</h1>
+                <p class="text-center text-accent text-sm lg:text-base font-ballo">
                     A clean home is a healthy home! Whether it's deep-cleaning your interiors or refreshing your outdoor spaces, we ensure a spotless and inviting environment.
                 </p>
             </div>
     
             <div class="flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/plumbing.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
-                <h1 class="text-dark text-2xl lg:text-[40px] font-bold">Plumbing</h1>
-                <p class="text-center text-sm lg:text-base">
+                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Plumbing</h1>
+                <p class="text-center text-sm lg:text-base text-accent font-ballo">
                     Leaky faucets? Clogged drains? Plumbing issues can be a real hassle. Our expert plumbers handle everything from minor fixes to major pipework.
                 </p>
             </div>
     
             <div class="flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/repair.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
-                <h1 class="text-dark text-2xl lg:text-[40px] font-bold">Repair Works</h1>
-                <p class="text-center text-sm lg:text-base">
+                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Repair Works</h1>
+                <p class="text-center text-sm lg:text-base text-accent font-ballo">
                     Small damages can lead to bigger problems if ignored. We provide quick and reliable repair services for fans, bulbs, fixtures, and more.
                 </p>
             </div>
@@ -276,24 +283,24 @@
             <div id="more-cards" class="hidden lg:grid lg:grid-cols-3 justify-items-center lg:col-span-3 lg:justify-items-center gap-6 w-full">
                 <div class="flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                     <img src="./static/image/carpenter.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
-                    <h1 class="text-dark text-2xl lg:text-[40px] font-bold">Carpenter</h1>
-                    <p class="text-center text-sm lg:text-base">
+                    <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Carpenter</h1>
+                    <p class="text-center text-sm lg:text-base text-accent font-ballo">
                         From fixing broken furniture to custom woodwork, our skilled carpenters bring precision and quality to every project.
                     </p>
                 </div>
     
                 <div class="flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                     <img src="./static/image/electrical.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
-                    <h1 class="text-dark text-2xl lg:text-[40px] font-bold">Electrics</h1>
-                    <p class="text-center text-sm lg:text-base">
+                    <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Electrics</h1>
+                    <p class="text-center text-sm lg:text-base font-ballo text-accent">
                         Electrical issues can be dangerous if left unchecked. Our expert electricians handle installations, repairs, and maintenance.
                     </p>
                 </div>
     
                 <div class="flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                     <img src="./static/image/refurbishment.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
-                    <h1 class="text-dark text-2xl lg:text-[40px] font-bold">Refurbishment</h1>
-                    <p class="text-center text-sm lg:text-base">
+                    <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Refurbishment</h1>
+                    <p class="text-center text-sm lg:text-base text-accent font-ballo">
                         Whether it’s a minor touch-up or a full renovation, our refurbishment services help transform your property into something fresh and modern.
                     </p>
                 </div>
@@ -311,7 +318,7 @@
 
 
     <!-- before / after section -->
-    <h1 class="text-center text-accent text-[60px] font-bold">Before / After</h1>
+    <h1 class="text-center text-accent text-[60px] font-bold font-lora">Gallery</h1>
     
     <section class="grid mt-3 grid-cols-2 md:grid-cols-3 gap-6 px-7 justify-center">
         <!-- Card 1 -->
@@ -439,7 +446,7 @@
     </section>
     
     
-    <footer class="bg-accent mt-5 text-white pt-8 pb-5 px-6 lg:mt-10 lg:px-12 rounded-t-[30px]">
+    <footer class="bg-accent mt-5 text-white pt-8 pb-5 px-6 lg:mt-10 lg:px-12 rounded-t-[30px] font-ballo">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- Left Section -->
             <div class="space-y-5">
@@ -447,7 +454,7 @@
                 <img src="./static/image/logo.svg" class="w-32">
                 
                 <!-- Description -->
-                <p class="hidden lg:block w-3/4 text-justify text-sm opacity-80">
+                <p class="hidden lg:block w-3/4 text-justify text-sm opacity-90">
                     At JS & Daughters Property Management, we specialize in comprehensive cleaning, repairs, and home upgrades. Our dedicated team ensures your property is well-maintained and inviting, delivering exceptional service every time.
                 </p>
     
@@ -486,7 +493,7 @@
         </div>
     
         <!-- Copyright -->
-        <div class="border-t border-white/20 mt-6 pt-4 text-center text-xs opacity-70">
+        <div class="border-t border-white/20 mt-6 pt-4 text-center text-xs opacity-70 font-ballo">
             © 2025 JS & Daughters Property Management. All Rights Reserved.
         </div>
     </footer>
