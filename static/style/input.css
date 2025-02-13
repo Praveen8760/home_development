@@ -6,6 +6,13 @@
 }
 
 @font-face {
+    font-family: 'montserrat';
+    src: url('/static/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'lora';
     src: url('/static/fonts/Lora-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
@@ -34,4 +41,7 @@
 
 .font-molengo {
     font-family: 'molengo', sans-serif;
+}
+.font-montserrat{
+    font-family: 'montserrat', sans-serif;
 }
