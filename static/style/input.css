@@ -7,21 +7,21 @@
 
 @font-face {
     font-family: 'montserrat';
-    src: url('/static/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    src: url('./static/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'lora';
-    src: url('/static/fonts/Lora-VariableFont_wght.ttf') format('truetype');
+    src: url('./static/fonts/Lora-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'molengo';
-    src: url('/static/fonts/Molengo-Regular.ttf') format('truetype');
+    src: url('./static/fonts/Molengo-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
