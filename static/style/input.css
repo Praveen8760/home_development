@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'ballo';
-    src: url('/static/fonts/Baloo2-VariableFont_wght.ttf') format('truetype');
+    src: url('./static/fonts/Baloo2-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
