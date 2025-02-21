@@ -253,37 +253,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-// loader
-    gsap.to("#rotating-circle", {
-        strokeDashoffset: 0,
-        duration: 2,
-        ease: "power2.inOut",
-        repeat: -1
-      });
-    
-      // Logo Scale-in Animation
-      gsap.from("#custom-logo", {
-        scale: 0,
-        duration: 1.2,
-        ease: "back.out(1.7)"
-      });
-    
-      // Text Fade and Glitch Animation
-      gsap.from("#loader-text", {
-        opacity: 0,
-        y: 20,
-        duration: 1.5,
-        delay: 1,
-        ease: "power3.out"
-      });
-    
-      // Loader Exit Animation after 5 seconds
-      gsap.to("#loader-overlay", {
-        opacity: 0,
-        pointerEvents: "none",
-        duration: 1,
-        delay: 5
-      });
-
 
 

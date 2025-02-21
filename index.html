@@ -21,6 +21,9 @@
     <!-- javaScript import -->
     <script src="./static/js/animation.js" defer></script>
     <script src="./static/js/index.js" defer></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     
 </head>
 
@@ -369,8 +372,10 @@
 
     <!-- before / after section -->
     <h1 class="text-center text-accent text-[40px] font-bold font-lora lg:text-[60px]">Gallery</h1>
+
+
     
-    <section class="grid mt-3 grid-cols-2 md:grid-cols-3 gap-6 px-7 justify-center z-10">
+    <section class="grid mt-3 grid-cols-1 md:grid-cols-3 gap-6 px-7 justify-center z-10">
         <!-- Card 1 -->
         <div class="container">
             <div class="image-container relative">
@@ -451,151 +456,112 @@
                 </div>
             </div>
           </div>
-          
-          <!-- card-4 -->
+    </section>
+
+    <section class="grid mt-3 grid-cols-1 md:grid-cols-3 gap-6 px-7 justify-center z-10">
+        <div id="more_after" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center mt-5">
+          <!-- Card 4 -->
           <div class="container">
             <div class="image-container relative">
               <img class="image-before slider-image" src="./static/image/before_after/b4.jpg" alt="color photo"/>
               <img class="image-after slider-image" src="./static/image/before_after/a4.jpg" alt="black and white"/>
-          
-              <!-- Before and After Text -->
               <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
               <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
             </div>
-          
-            <!-- Slider -->
-            <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
-            <div class="slider-line" aria-hidden="true"></div>
-                <div class="slider-button" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
-                    <rect width="256" height="256" fill="none"></rect>
-                    <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                    <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                    <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                    <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                    <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                </svg>
-                </div>
+            <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider w-full mt-2"/>
+          </div>
+    
+          <!-- Card 5 -->
+          <div class="container">
+            <div class="image-container relative">
+              <img class="image-before slider-image" src="./static/image/before_after/b5.jpg" alt="color photo"/>
+              <img class="image-after slider-image" src="./static/image/before_after/a5.jpg" alt="black and white"/>
+              <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
+              <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
             </div>
-
-            <!-- card-5 -->
-
-            <div class="container">
-                <div class="image-container relative">
-                  <img class="image-before slider-image" src="./static/image/before_after/b5.jpg" alt="color photo"/>
-                  <img class="image-after slider-image" src="./static/image/before_after/a5.jpg" alt="black and white"/>
-              
-                  <!-- Before and After Text -->
-                  <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
-                  <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
-                </div>
-              
-                <!-- Slider -->
-                <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
-                <div class="slider-line" aria-hidden="true"></div>
-                    <div class="slider-button" aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
-                        <rect width="256" height="256" fill="none"></rect>
-                        <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                        <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                    </svg>
-                </div>
+            <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider w-full mt-2"/>
+          </div>
+    
+          <!-- Card 6 -->
+          <div class="container">
+            <div class="image-container relative">
+              <img class="image-before slider-image" src="./static/image/before_after/b6.jpg" alt="color photo"/>
+              <img class="image-after slider-image" src="./static/image/before_after/a6.jpg" alt="black and white"/>
+              <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
+              <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
             </div>
-
-                <!-- card-6 -->
-                <div class="container">
-                    <div class="image-container relative">
-                      <img class="image-before slider-image" src="./static/image/before_after/b6.jpg" alt="color photo"/>
-                      <img class="image-after slider-image" src="./static/image/before_after/a6.jpg" alt="black and white"/>
-                  
-                      <!-- Before and After Text -->
-                      <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
-                      <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
-                    </div>
-                  
-                    <!-- Slider -->
-                    <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
-                    <div class="slider-line" aria-hidden="true"></div>
-                        <div class="slider-button" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            </svg>
-                     </div>
-                </div>
-    </section>
-    
-
-    <footer id="animated-footer" class="bg-accent mt-5 text-white pt-8 pb-5 px-6 lg:mt-10 lg:px-12 rounded-t-[30px] font-ballo">
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Left Section -->
-            <div class="space-y-5">
-                <!-- Logo -->
-                <img src="./static/image/logo-2.svg" class="w-48">
-    
-                <!-- Description -->
-                <p class="hidden lg:block w-3/4 text-justify text-sm opacity-90">
-                    At JS & Daughters Property Management, we specialize in comprehensive cleaning, repairs, and home upgrades. Our dedicated team ensures your property is well-maintained and inviting, delivering exceptional service every time.
-                </p>
-    
-                <!-- Contact & Location -->
-                <div class="grid grid-cols-2 gap-6 text-sm">
-                    <ul class="space-y-2">
-                        <li class="font-bold text-lg">Contact Us</li>
-                        <li class="opacity-90">Sri Lanka : +94 77 122 1356</li>
-                        <li class="opacity-90">Germany : +49 176 23668259</li>
-                        <li class="opacity-90">UK : +44 7877 233 699</li>
-                        <!-- <li class="opacity-90"><a href="mailto:info@js-daughters.com">info@js-daughters.com</a></li> -->
-                        <li>
-                            <a href="mailto:info@js-daughters.com?subject=Inquiry&body=Hello,%20I%20am%20interested%20in%20your%20services." target="_parent">
-                                info@js-daughters.com
-                            </a>
-                        </li>
-                          
-                    </ul>
-                    <ul class="space-y-2">
-                        <li class="font-bold text-lg">Location</li>
-                        <li class="opacity-80 text-lg">Jaffna, Sri Lanka</li>
-                    </ul>
-                </div>
-            </div>
-    
-            <!-- Right Section -->
-            <div class="flex flex-col items-center lg:items-end space-y-5 font-ballo lg:text-lg">
-                <!-- Footer Navigation -->
-                <ul id="footer-nav" class="flex gap-6 text-sm font-semibold tracking-wide lg:text-xl">
-                    <li class="hover:text-gray-300 cursor-pointer transition-transform transform hover:scale-105">Home</li>
-                    <li class="hover:text-gray-300 cursor-pointer transition-transform transform hover:scale-105">Services</li>
-                    <li class="hover:text-gray-300 cursor-pointer transition-transform transform hover:scale-105">Projects</li>
-                    <li class="hover:text-gray-300 cursor-pointer transition-transform transform hover:scale-105">About Us</li>
-                </ul>
-    
-                <!-- Social Media Icons -->
-                <div class="flex-grow"></div>
-                
-                <p class="text-lg lg:text-xl font-ballo font-semibold tracking-wide">Follow Us</p>
-                <div id="social-icons" class="flex gap-4 justify-self-end">
-                    <img src="./static/image/whatsapp.svg" class="w-12 h-12 hover:scale-110 transition-transform cursor-pointer">
-                    <img src="./static/image/facebook.svg" class="w-12 h-12 hover:scale-110 transition-transform cursor-pointer">
-                    <img src="./static/image/insta.svg" class="w-12 h-12 hover:scale-110 transition-transform cursor-pointer">
-                    <img src="./static/image/tikTok_icon.svg" class="w-12 h-12 hover:scale-110 transition-transform cursor-pointer">
-                </div>
-            </div>
+            <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider w-full mt-2"/>
+          </div>
         </div>
     
+        <div class="flex justify-center mt-6">
+          <button id="show-more-after-btn" class="font-ballo px-6 py-3 text-accent rounded-full duration-300 ease-in-out text-lg shadow-md hover:bg-accent hover:text-white hover:scale-105">
+            More Images
+          </button>
+        </div>
+    </section>
+        
+    
+
+    <footer id="animated-footer" class="bg-accent mt-8 text-white pt-8 pb-5 px-6 lg:mt-10 lg:px-12 rounded-t-[30px] font-ballo">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Left Section -->
+          <div class="space-y-5">
+            <!-- Logo -->
+            <img src="./static/image/logo-2.svg" class="w-40 md:w-48 mx-auto lg:mx-0">
+      
+            <!-- Description -->
+            <p class="hidden lg:block w-full lg:w-3/4 text-justify text-sm opacity-90">
+              At JS & Daughters Property Management, we specialize in comprehensive cleaning, repairs, and home upgrades. Our dedicated team ensures your property is well-maintained and inviting, delivering exceptional service every time.
+            </p>
+      
+            <!-- Contact & Location -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
+              <ul class="space-y-2">
+                <li class="font-bold text-lg">Contact Us</li>
+                <li class="opacity-90">Sri Lanka : +94 77 122 1356</li>
+                <li class="opacity-90">Germany : +49 176 23668259</li>
+                <li class="opacity-90">UK : +44 7877 233 699</li>
+                <li>
+                  <a href="mailto:info@js-daughters.com?subject=Inquiry&body=Hello,%20I%20am%20interested%20in%20your%20services." target="_parent" class="hover:underline">
+                    info@js-daughters.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="space-y-2">
+                <li class="font-bold text-lg">Location</li>
+                <li class="opacity-80 text-lg">Jaffna, Sri Lanka</li>
+              </ul>
+            </div>
+          </div>
+      
+          <!-- Right Section -->
+          <div class="flex flex-col items-center lg:items-end space-y-5 font-ballo lg:text-lg">
+            <!-- Footer Navigation -->
+            <ul id="footer-nav" class="flex flex-wrap justify-center lg:justify-end gap-4 text-sm font-semibold tracking-wide lg:text-xl">
+              <li class="hover:text-gray-300 cursor-pointer transition-transform transform hover:scale-105">Home</li>
+              <li class="hover:text-gray-300 cursor-pointer transition-transform transform hover:scale-105">Services</li>
+              <li class="hover:text-gray-300 cursor-pointer transition-transform transform hover:scale-105">Projects</li>
+              <li class="hover:text-gray-300 cursor-pointer transition-transform transform hover:scale-105">About Us</li>
+            </ul>
+      
+            <!-- Social Media Icons -->
+             <div class="hidden lg:block lg:flex-grow"></div>
+            <p class="text-lg lg:text-xl font-ballo font-semibold tracking-wide">Follow Us</p>
+            <div id="social-icons" class="flex gap-4 justify-center lg:justify-end">
+              <img src="./static/image/whatsapp.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer">
+              <img src="./static/image/facebook.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer">
+              <img src="./static/image/insta.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer">
+              <img src="./static/image/tikTok_icon.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer">
+            </div>
+          </div>
+        </div>
+      
         <!-- Copyright -->
         <div class="border-t border-white/20 mt-6 pt-4 text-center text-xs opacity-70 font-ballo">
-            © 2025 JS & Daughters Property Management. All Rights Reserved.
+          © 2025 JS & Daughters Property Management. All Rights Reserved.
         </div>
     </footer>
-
+      
 </body>
 </html>

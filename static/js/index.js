@@ -21,6 +21,20 @@ document.getElementById("show-more-btn").addEventListener("click", function () {
     }
 });
 
+
+document.getElementById("show-more-after-btn").addEventListener("click", function () {
+    const moreCards = document.getElementById("more_after");
+    if (moreCards.classList.contains("hidden")) {
+        moreCards.classList.remove("hidden");
+        moreCards.classList.add("grid");
+        this.innerText = "Show Less";
+    } else {
+        moreCards.classList.remove("grid");
+        moreCards.classList.add("hidden");
+        this.innerText = "More Images";
+    }
+});
+
 // before/after card
 
 document.querySelectorAll('.container').forEach(container => {
