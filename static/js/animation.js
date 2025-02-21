@@ -255,3 +255,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+gsap.registerPlugin(ScrollToPlugin) 
+const navLinks = document.querySelectorAll(".nav-link");
+  
+navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+    e.preventDefault();
+  
+    const target = document.querySelector(link.getAttribute("href"));
+  
+    gsap.to(window, {
+        duration: 1, // Smooth scroll duration
+        scrollTo: target, // Scroll to the section
+        ease: "power2.inOut"
+        });
+    });
+});

@@ -31,3 +31,8 @@
 .font-montserrat { font-family: 'montserrat', sans-serif; }
 .font-lora { font-family: 'lora', serif; }
 .font-molengo { font-family: 'molengo', sans-serif; }
+
+
+html{
+  scroll-behavior: auto;
+}
