@@ -241,7 +241,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // footer 
-
     gsap.from("#animated-footer", {
         opacity: 0,
         y: 50,
