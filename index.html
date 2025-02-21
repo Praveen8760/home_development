@@ -6,21 +6,41 @@
     <title>JS & DAUGHTERS</title>
     <link rel="icon" type="image/x-icon" href="./static/image/favicon.svg">
     
+
+    <!-- StyleSheet (CSS) -->
     <link rel="stylesheet" href="./static/style/output.css">
     <link rel="stylesheet" href="./static/style/main.css">
 
+    <!-- CDN Linkes -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.0/flowbite.min.js"></script>
-
-    <!-- cdn -->
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+
+    <!-- javaScript import -->
     <script src="./static/js/animation.js" defer></script>
-
+    <script src="./static/js/index.js" defer></script>
+    
 </head>
-<body class="bg-white overflow-x-hidden">
 
+
+<body class="bg-white overflow-x-hidden">
+    
+    <!-- loader -->
+    <div id="loader-overlay" class="fixed flex inset-0 flex-col items-center justify-center z-50 backdrop-blur-lg bg-gradient-to-r from-white-100 via-white-200 to-white-800/60">
+        <svg id="loader-svg" width="300" height="300" viewBox="0 0 200 250">
+          
+            <circle id="rotating-circle" cx="100" cy="100" r="70" fill="none" stroke="#881415" stroke-width="4" stroke-dasharray="440" stroke-dashoffset="440"></circle>
+          
+            <foreignObject x="65" y="65" width="70" height="70">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="flex items-center justify-center w-full h-full">
+                <img src="./static/image/favicon.svg" alt="JS Icon" class="w-16 h-16" />
+              </div>
+            </foreignObject>
+          
+        </svg>
+        <h1 class="font-ballo text-5xl font-semibold glitch animated-text">JS and Daughters</h1>
+    </div>
 
     <!-- Navbar (Fixed in Mobile, Overlapping in Desktop) -->
     <!-- Navbar -->
@@ -265,7 +285,7 @@
                     A clean home is a healthy home! Whether it's deep-cleaning your interiors or refreshing your outdoor spaces, we ensure a spotless and inviting environment.
                 </p>
             </div>
-    
+        
             <div id="service-card-2" class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/plumbing.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
                 <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Plumbing</h1>
@@ -273,7 +293,7 @@
                     Leaky faucets? Clogged drains? Plumbing issues can be a real hassle. Our expert plumbers handle everything from minor fixes to major pipework.
                 </p>
             </div>
-    
+        
             <div id="service-card-3" class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/repair.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
                 <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Repair Works</h1>
@@ -282,9 +302,9 @@
                 </p>
             </div>
         </section>
-    
-        <!-- Last 3 Cards (Hidden on Mobile, Visible on Desktop) -->
-        <div id="more-cards" class="hidden lg:grid lg:grid-cols-3 justify-items-center lg:col-span-3 lg:justify-items-center gap-6 w-full">
+        
+        <!-- Last 3 Cards (Hidden by Default) -->
+        <div id="more-cards" class="hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center mt-5">
             <div class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/carpenter.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
                 <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Carpenter</h1>
@@ -292,7 +312,7 @@
                     From fixing broken furniture to custom woodwork, our skilled carpenters bring precision and quality to every project.
                 </p>
             </div>
-    
+        
             <div class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/electrical.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
                 <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Electrics</h1>
@@ -300,7 +320,7 @@
                     Electrical issues can be dangerous if left unchecked. Our expert electricians handle installations, repairs, and maintenance.
                 </p>
             </div>
-    
+        
             <div class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/refurbishment.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
                 <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Refurbishment</h1>
@@ -308,14 +328,39 @@
                     Whether it’s a minor touch-up or a full renovation, our refurbishment services help transform your property into something fresh and modern.
                 </p>
             </div>
+        
+            <div class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
+                <img src="./static/image/construction_icon.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
+                <h1 class="text-dark text-2xl lg:text-[20px] font-bold font-lora">New and Re-Constructions</h1>
+                <p class="text-center text-sm lg:text-base text-accent font-ballo">
+                    Building your dream space from the ground up? Our New and Re-Constructions services offer expert planning, quality craftsmanship, and modern design solutions to bring your vision to life.
+                </p>
+            </div>
+        
+            <div class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
+                <img src="./static/image/landSales_icon.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
+                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Land Sales</h1>
+                <p class="text-center text-sm lg:text-base font-ballo text-accent">
+                    Looking to buy or sell land? Our Land Sales services connect you with prime properties and trusted buyers, ensuring smooth transactions.
+                </p>
+            </div>
+        
+            <div class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
+                <img src="./static/image/securtiy_icon.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
+                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Security, Key-holder</h1>
+                <p class="text-center text-sm lg:text-base text-accent font-ballo">
+                    Ensure the safety and accessibility of your property with our reliable Security and Key-holder services.
+                </p>
+            </div>
         </div>
-    
-        <!-- More Button (Only for Mobile) -->
-        <div class="flex justify-center mt-6 lg:hidden">
-            <button id="show-more-btn" class="px-6 py-3 text-accent rounded-full duration-500 ease-in-out text-lg shadow-md hover:bg-accent hover:text-white hover:scale-105">
+        
+        <!-- Toggle Button -->
+        <div class="flex justify-center mt-6">
+            <button id="show-more-btn" class="font-ballo px-6 py-3 text-accent rounded-full duration-300 ease-in-out text-lg shadow-md hover:bg-accent hover:text-white hover:scale-105">
                 More Services
             </button>
         </div>
+    
     </section>
     
     
@@ -326,127 +371,164 @@
     
     <section class="grid mt-3 grid-cols-2 md:grid-cols-3 gap-6 px-7 justify-center z-10">
         <!-- Card 1 -->
-        <div class="container z-10">
-            <div class="image-container">
-              <img class="image-before slider-image" src="./static/image/lp-2.jpg" alt="color photo"/>
-              <img class="image-after slider-image" src="./static/image/lp-1.jpg" alt="black and white"/>
+        <div class="container">
+            <div class="image-container relative">
+              <img class="image-before slider-image" src="./static/image/before_after/b1.jpg" alt="color photo"/>
+              <img class="image-after slider-image" src="./static/image/before_after/a1.jpg" alt="black and white"/>
+          
+              <!-- Before and After Text -->
+              <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
+              <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
             </div>
-            <!-- step="10" -->
+          
+            <!-- Slider -->
             <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
             <div class="slider-line" aria-hidden="true"></div>
-            <div class="slider-button" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
-                <rect width="256" height="256" fill="none"></rect>
-                <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-              </svg>
+                <div class="slider-button" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                    <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                </svg>
+                </div>
             </div>
-          </div>
+          
+            <!-- card-2 -->
+
+            <div class="container">
+                <div class="image-container relative">
+                  <img class="image-before slider-image" src="./static/image/before_after/b2.jpg" alt="color photo"/>
+                  <img class="image-after slider-image" src="./static/image/before_after/a2.jpg" alt="black and white"/>
+              
+                  <!-- Before and After Text -->
+                  <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
+                  <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
+                </div>
+              
+                <!-- Slider -->
+                <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
+                <div class="slider-line" aria-hidden="true"></div>
+                    <div class="slider-button" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                        <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                    </svg>
+                    </div>
+                </div>
+
+                <!-- card-3 -->
 
           <div class="container">
-            <div class="image-container">
-              <img class="image-before slider-image" src="./static/image/lp-2.jpg" alt="color photo"/>
-              <img class="image-after slider-image" src="./static/image/lp-1.jpg" alt="black and white"/>
+            <div class="image-container relative">
+              <img class="image-before slider-image" src="./static/image/before_after/b3.jpg" alt="color photo"/>
+              <img class="image-after slider-image" src="./static/image/before_after/a3.jpg" alt="black and white"/>
+          
+              <!-- Before and After Text -->
+              <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
+              <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
             </div>
-            <!-- step="10" -->
+          
+            <!-- Slider -->
             <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
             <div class="slider-line" aria-hidden="true"></div>
-            <div class="slider-button" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
-                <rect width="256" height="256" fill="none"></rect>
-                <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-              </svg>
+                <div class="slider-button" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                    <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                </svg>
+                </div>
             </div>
           </div>
-
+          
+          <!-- card-4 -->
           <div class="container">
-            <div class="image-container">
-              <img class="image-before slider-image" src="./static/image/lp-2.jpg" alt="color photo"/>
-              <img class="image-after slider-image" src="./static/image/lp-1.jpg" alt="black and white"/>
+            <div class="image-container relative">
+              <img class="image-before slider-image" src="./static/image/before_after/b4.jpg" alt="color photo"/>
+              <img class="image-after slider-image" src="./static/image/before_after/a4.jpg" alt="black and white"/>
+          
+              <!-- Before and After Text -->
+              <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
+              <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
             </div>
-            <!-- step="10" -->
+          
+            <!-- Slider -->
             <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
             <div class="slider-line" aria-hidden="true"></div>
-            <div class="slider-button" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
-                <rect width="256" height="256" fill="none"></rect>
-                <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-              </svg>
+                <div class="slider-button" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                    <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                </svg>
+                </div>
             </div>
-          </div>
 
-          <div class="container">
-            <div class="image-container">
-              <img class="image-before slider-image" src="./static/image/lp-2.jpg" alt="color photo"/>
-              <img class="image-after slider-image" src="./static/image/lp-1.jpg" alt="black and white"/>
-            </div>
-            <!-- step="10" -->
-            <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
-            <div class="slider-line" aria-hidden="true"></div>
-            <div class="slider-button" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
-                <rect width="256" height="256" fill="none"></rect>
-                <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-              </svg>
-            </div>
-          </div>
+            <!-- card-5 -->
 
+            <div class="container">
+                <div class="image-container relative">
+                  <img class="image-before slider-image" src="./static/image/before_after/b5.jpg" alt="color photo"/>
+                  <img class="image-after slider-image" src="./static/image/before_after/a5.jpg" alt="black and white"/>
+              
+                  <!-- Before and After Text -->
+                  <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
+                  <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
+                </div>
+              
+                <!-- Slider -->
+                <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
+                <div class="slider-line" aria-hidden="true"></div>
+                    <div class="slider-button" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                        <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                    </svg>
+                </div>
+            </div>
 
-          <div class="container">
-            <div class="image-container">
-              <img class="image-before slider-image" src="./static/image/lp-2.jpg" alt="color photo"/>
-              <img class="image-after slider-image" src="./static/image/lp-1.jpg" alt="black and white"/>
-            </div>
-            <!-- step="10" -->
-            <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
-            <div class="slider-line" aria-hidden="true"></div>
-            <div class="slider-button" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
-                <rect width="256" height="256" fill="none"></rect>
-                <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-              </svg>
-            </div>
-          </div>
-
-
-          <div class="container">
-            <div class="image-container">
-              <img class="image-before slider-image" src="./static/image/lp-2.jpg" alt="color photo"/>
-              <img class="image-after slider-image" src="./static/image/lp-1.jpg" alt="black and white"/>
-            </div>
-            <!-- step="10" -->
-            <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
-            <div class="slider-line" aria-hidden="true"></div>
-            <div class="slider-button" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
-                <rect width="256" height="256" fill="none"></rect>
-                <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-              </svg>
-            </div>
-          </div>
+                <!-- card-6 -->
+                <div class="container">
+                    <div class="image-container relative">
+                      <img class="image-before slider-image" src="./static/image/before_after/b6.jpg" alt="color photo"/>
+                      <img class="image-after slider-image" src="./static/image/before_after/a6.jpg" alt="black and white"/>
+                  
+                      <!-- Before and After Text -->
+                      <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
+                      <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
+                    </div>
+                  
+                    <!-- Slider -->
+                    <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
+                    <div class="slider-line" aria-hidden="true"></div>
+                        <div class="slider-button" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+                            <rect width="256" height="256" fill="none"></rect>
+                            <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                            <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                            <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                            </svg>
+                     </div>
+                </div>
     </section>
     
 
@@ -456,7 +538,7 @@
             <!-- Left Section -->
             <div class="space-y-5">
                 <!-- Logo -->
-                <img src="./static/image/logo-2.svg" class="w-36">
+                <img src="./static/image/logo-2.svg" class="w-48">
     
                 <!-- Description -->
                 <p class="hidden lg:block w-3/4 text-justify text-sm opacity-90">
@@ -467,8 +549,16 @@
                 <div class="grid grid-cols-2 gap-6 text-sm">
                     <ul class="space-y-2">
                         <li class="font-bold text-lg">Contact Us</li>
-                        <li class="opacity-80">+94 778 226826</li>
-                        <li class="opacity-80"><a href="info@js-daughters.com">info@js-daughters.com</a></li>
+                        <li class="opacity-90">Sri Lanka : +94 77 122 1356</li>
+                        <li class="opacity-90">Germany : +49 176 23668259</li>
+                        <li class="opacity-90">UK : +44 7877 233 699</li>
+                        <!-- <li class="opacity-90"><a href="mailto:info@js-daughters.com">info@js-daughters.com</a></li> -->
+                        <li>
+                            <a href="mailto:info@js-daughters.com?subject=Inquiry&body=Hello,%20I%20am%20interested%20in%20your%20services." target="_parent">
+                                info@js-daughters.com
+                            </a>
+                        </li>
+                          
                     </ul>
                     <ul class="space-y-2">
                         <li class="font-bold text-lg">Location</li>
@@ -478,9 +568,9 @@
             </div>
     
             <!-- Right Section -->
-            <div class="flex flex-col items-center lg:items-end space-y-5">
+            <div class="flex flex-col items-center lg:items-end space-y-5 font-ballo lg:text-lg">
                 <!-- Footer Navigation -->
-                <ul id="footer-nav" class="flex gap-6 text-sm font-semibold tracking-wide">
+                <ul id="footer-nav" class="flex gap-6 text-sm font-semibold tracking-wide lg:text-xl">
                     <li class="hover:text-gray-300 cursor-pointer transition-transform transform hover:scale-105">Home</li>
                     <li class="hover:text-gray-300 cursor-pointer transition-transform transform hover:scale-105">Services</li>
                     <li class="hover:text-gray-300 cursor-pointer transition-transform transform hover:scale-105">Projects</li>
@@ -488,11 +578,14 @@
                 </ul>
     
                 <!-- Social Media Icons -->
-                <div id="social-icons" class="flex gap-4">
+                <div class="flex-grow"></div>
+                
+                <p class="text-lg lg:text-xl font-ballo font-semibold tracking-wide">Follow Us</p>
+                <div id="social-icons" class="flex gap-4 justify-self-end">
                     <img src="./static/image/whatsapp.svg" class="w-12 h-12 hover:scale-110 transition-transform cursor-pointer">
                     <img src="./static/image/facebook.svg" class="w-12 h-12 hover:scale-110 transition-transform cursor-pointer">
                     <img src="./static/image/insta.svg" class="w-12 h-12 hover:scale-110 transition-transform cursor-pointer">
-                    <img src="./static/image/telgram.svg" class="w-12 h-12 hover:scale-110 transition-transform cursor-pointer">
+                    <img src="./static/image/tikTok_icon.svg" class="w-12 h-12 hover:scale-110 transition-transform cursor-pointer">
                 </div>
             </div>
         </div>
@@ -502,46 +595,6 @@
             © 2025 JS & Daughters Property Management. All Rights Reserved.
         </div>
     </footer>
-
-
-
-    <!-- JavaScript for Mobile Menu -->
-    <script>
-        const menuBtn = document.getElementById("menu-btn");
-        const mobileMenu = document.getElementById("mobile-menu");
     
-        menuBtn.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-        });
-    </script>
-
-
-    <!-- Script for Toggle More Cards on Mobile -->
-    <script>
-        document.getElementById("show-more-btn").addEventListener("click", function () {
-            const moreCards = document.getElementById("more-cards");
-            if (moreCards.classList.contains("hidden")) {
-                moreCards.classList.remove("hidden");
-                moreCards.classList.add("grid");
-                this.innerText = "Show Less";
-            } else {
-                moreCards.classList.remove("grid");
-                moreCards.classList.add("hidden");
-                this.innerText = "More Services";
-            }
-        });
-    </script>
-
-    <!-- before/after -->
-    <script>
-        const container = document.querySelector('.container');
-        document.querySelector('.slider').addEventListener('input', (e) => {
-        container.style.setProperty('--position', `${e.target.value}%`);
-        })
-    </script>
-
-
-
-
 </body>
 </html>

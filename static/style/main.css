@@ -120,4 +120,66 @@ main {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+
+       /* Base Text Style */
+       .responsive-text {
+        font-size: 26px;
+      }
+
+      .image-container {
+          position: relative;
+      }
+
+      .before-text, .after-text {
+          transition: opacity 0.3s ease, transform 0.3s ease;
+          pointer-events: none; /* Prevent text from interfering with slider */
+      }
+
+      .before-text.center, .after-text.center {
+          left: 50%;
+          right: auto;
+          transform: translate(-50%, -50%);
+      }
+
+    
+      /* Tablet View */
+      @media (min-width: 640px) {
+        .responsive-text {
+          font-size: 20px;
+        }
+      }
+    
+      /* Desktop View */
+      @media (min-width: 1024px) {
+        .responsive-text {
+          font-size: 28px;
+        }
+      }
+    
+      /* Glitch Animation */
+      .glitch {
+        animation: glitch 1s infinite;
+      }
+      .animated-text {
+          animation: colorChange 3s infinite alternate ease-in-out;
+      }
+
+      @keyframes colorChange {
+          0% {
+          color: #888; /* Starting Color (Example Primary) */
+          }
+          100% {
+          color: #FFFFFF; /* Transition to White */
+          }
+      }
+    
+      @keyframes glitch {
+        0% { transform: translate(0); }
+        20% { transform: translate(-1px, 1px); }
+        40% { transform: translate(1px, -1px); }
+        60% { transform: translate(-1px, -1px); }
+        80% { transform: translate(1px, 1px); }
+        100% { transform: translate(0); }
+      }
   

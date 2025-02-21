@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
         gsap.to(["#bg-image-mobile", "#bg-image-desktop"], {
             opacity: 1,
             scale: 1,
-            duration: 1.2,
-            ease: "power2.out"
+            duration: 1,
+            ease: "power4"
         });
 
         gsap.to("#hero-section", { opacity: 1, duration: 1, ease: "power2.out" });
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.from(".choose-us-image", {
         x: 100,
         opacity: 0,
-        rotate: 10,
+        rotate: 0,
         duration: 1.5,
         ease: "power3.out",
         scrollTrigger: { trigger: ".choose-us-image", start: "top 85%" }
@@ -253,6 +253,38 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleActions: "play none none none"
         }
     });
+
+// loader
+    gsap.to("#rotating-circle", {
+        strokeDashoffset: 0,
+        duration: 2,
+        ease: "power2.inOut",
+        repeat: -1
+      });
+    
+      // Logo Scale-in Animation
+      gsap.from("#custom-logo", {
+        scale: 0,
+        duration: 1.2,
+        ease: "back.out(1.7)"
+      });
+    
+      // Text Fade and Glitch Animation
+      gsap.from("#loader-text", {
+        opacity: 0,
+        y: 20,
+        duration: 1.5,
+        delay: 1,
+        ease: "power3.out"
+      });
+    
+      // Loader Exit Animation after 5 seconds
+      gsap.to("#loader-overlay", {
+        opacity: 0,
+        pointerEvents: "none",
+        duration: 1,
+        delay: 5
+      });
 
 
 
