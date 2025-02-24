@@ -31,16 +31,15 @@
     
     
     <!-- Navbar -->
-    <nav id="navbar" class="w-full px-6 py-4 lg:pr-0 z-20 fixed top-0 md:absolute md:bg-transparent bg-white shadow-md md:shadow-none opacity-0 translate-y-[-50px]">
+    <nav id="navbar" class="w-full px-6 py-4 lg:pr-0 z-20 fixed top-0 lg:absolute lg:bg-transparent bg-white shadow-md lg:shadow-none opacity-0 translate-y-[-50px]">
         <div class="flex items-center justify-between">
-            
             <!-- Logo -->
             <div>
                 <img src="./static/image/logo.svg" alt="Logo" class="h-8 lg:h-12">
             </div>
     
             <!-- Desktop Navigation -->
-            <div class="font-semibold hidden font-ballo tracking-widest md:flex space-x-8 text-dark md:text-white uppercase absolute left-1/2 transform -translate-x-1/2">
+            <div class="font-semibold hidden font-ballo tracking-widest lg:flex space-x-8 text-dark lg:text-white uppercase absolute left-1/2 transform -translate-x-1/2">
                 <a href="#" class="hover:text-gray-300 nav-link">Home</a>
                 <a href="#services-section" class="hover:text-gray-300 nav-link">Services</a>
                 <a href="#latest-projects" class="hover:text-gray-300 nav-link">Projects</a>
@@ -48,30 +47,29 @@
             </div>
     
             <!-- Contact Button (Only for Desktop) -->
-            <div class="hidden md:flex ml-auto items-center space-x-5 mr-3">
-                <button class="font-semibold font-ballo text-white px-[26px] py-[12px] rounded-[160px] bg-accent focus:outline-none">
+            <div class="hidden lg:flex ml-auto items-center space-x-5 mr-3">
+                <button class="font-semibold font-ballo text-white px-[26px] py-[12px] rounded-[160px] bg-accent focus:outline-none" onclick="openWhatsApp()">
                     Contact Us Now
                 </button>
-                <div class="bg-accent rounded-full w-12 h-12 flex items-center justify-center text-white text-lg p-3">
+                <div class="bg-accent rounded-full w-12 h-12 flex items-center justify-center text-white text-lg p-3" onclick="openWhatsApp()">
                     <img src="./static/image/whatsapp_icon.svg" alt="" class="w-full h-full object-contain">
                 </div>
             </div>
     
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-dark focus:outline-primary">
+            <!-- Mobile/Tablet Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-dark focus:outline-primary">
                 <svg class="w-8 h-8" fill="none" stroke="#282A36" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </div>
     
-        <!-- Mobile Collapsible Menu -->
-        <div id="mobile-menu" class="hidden flex-col items-center space-y-4 py-6 text-accent md:hidden w-full rounded-lg transition-all duration-300 opacity-0 scale-95 z-50">
+        <!-- Mobile/Tablet Collapsible Menu -->
+        <div id="mobile-menu" class="hidden flex-col items-center space-y-4 py-6 text-accent lg:hidden w-full rounded-lg transition-all duration-300 opacity-0 scale-95 z-50">
             <ul class="flex mt-2 flex-col justify-center items-center rounded-lg space-y-4 w-full">
                 <li class="w-1/2 text-center border-b-2 hover:border-primary">
                     <a href="#" class="block w-full py-2 text-lg font-medium hover:text-dark transition duration-300 rounded-md hover:scale-110">Home</a>
                 </li>
-            
                 <li class="w-1/2 text-center border-b-2 hover:border-primary">
                     <a href="#services-section" class="block w-full py-2 text-lg font-medium hover:text-dark transition duration-300 rounded-md hover:scale-110">Services</a>
                 </li>
@@ -85,23 +83,23 @@
         </div>
     </nav>
     
-
-    <!-- Section (Image Moves Down in Mobile) -->
-    <section id="hero-section" class="relative w-full mt-[60px] md:mt-0 opacity-0">
+    <!-- Section (Image Moves Down in Mobile/Tablet) -->
+    <section id="hero-section" class="relative w-full mt-[60px] lg:mt-0 opacity-0">
         <!-- Background Images -->
-        <img src="./static/image/home.jpg" class="w-full h-auto sm:hidden mt-[70px] md:mt-0 opacity-0 scale-90" id="bg-image-mobile" alt="Background Mobile">
-        <img src="./static/image/rect.svg" class="w-full h-auto hidden sm:block opacity-0 scale-90" id="bg-image-desktop" alt="Background Desktop">
+        <img src="./static/image/home.jpg" class="w-full h-auto lg:hidden mt-[70px] lg:mt-0 opacity-0 scale-90" id="bg-image-mobile" alt="Background Mobile">
+        <img src="./static/image/rect.svg" class="w-full h-auto hidden lg:block opacity-0 scale-90" id="bg-image-desktop" alt="Background Desktop">
     
         <!-- Wrapper to match image height -->
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-            <h1 class="font-ballo text-[30px] font-bold lg:text-[60px] opacity-0 translate-y-10" id="head1">
+            <h1 class="font-ballo text-[30px] md:text-[46px] font-bold lg:text-[60px] opacity-0 translate-y-10" id="head1">
                 Turning Maintenance into Magic
             </h1>
-            <p class="font-molengo md:text-xl lg:mt-4 lg:text-[36px] opacity-0 scale-90">
+            <p class="font-molengo lg:text-xl md:text-2xl lg:mt-4 lg:text-[36px] opacity-0 scale-90">
                 Reliable, Effortless, Exceptional!
             </p>
         </div>
     </section>
+    
     
 
     <section id="stats-section" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 py-8 lg:px-12 lg:mt-5 font-montserrat opacity-0">
@@ -148,7 +146,7 @@
                  class="choose-us-image w-80 sm:w-64 lg:w-[400px]">
         
             <!-- Description -->
-            <p class="choose-us-text font-ballo text-dark sm:text-lg lg:w-1/2 lg:text-[25px] text-justify font-normal leading-relaxed">
+            <p class="choose-us-text font-ballo md:px-7 md:text-[22px] text-dark sm:text-lg lg:w-1/2 lg:text-[25px] text-justify font-normal leading-relaxed">
                 When it comes to property management, we offer a seamless experience that prioritizes your peace of mind. Our team of seasoned professionals is dedicated to providing reliable, high-quality maintenance services tailored to your unique needs. Whether it's routine upkeep or urgent repairs, we ensure every job is handled with care and efficiency. With transparent pricing, no hidden fees, and a commitment to timely responses, we work hard to maintain your property’s value and functionality. Trust us to be your go-to partner for stress-free property management that keeps your space in perfect condition year-round.
             </p>
         </div>
@@ -156,10 +154,10 @@
     
 
     <!-- gallery -->
-    <section id="latest-projects" class="z-0">
+    <section id="latest-projects" class="z-0 md:px-6 lg:px-8">
         <h1 class="text-accent text-[34px] font-bold text-center lg:text-[60px] font-lora">Our Latest Projects</h1>
         
-        <div class="hidden justify-stretch items-center mx-10 px-10 max-w-[1400px] lg:mt-4 lg:flex">
+        <div class="hidden md:flex justify-stretch items-center lg:mx-10 px-10 max-w-[1400px] md:mt-4 lg:flex">
             <svg width="100%" height="full" viewBox="0 0 1407 625" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <path d="M0 32.2699C0 21.0751 9.07519 11.9999 20.27 11.9999H331.348C342.543 11.9999 351.618 21.0751 351.618 32.2699V310.424C351.618 321.619 360.693 330.694 371.888 330.694H439.73C450.925 330.694 460 339.769 460 350.964V481.922V602.73C460 613.925 450.925 623 439.73 623H20.27C9.07517 623 0 613.925 0 602.73V32.2699Z" fill="url(#pattern0_17_4520)"/>
                 <g filter="url(#filter0_i_17_4520)">
@@ -212,7 +210,7 @@
             </svg>
         </div>
 
-        <div id="gallery" class="relative w-full mt-4 lg:hidden px-10 z-0" data-carousel="slide">
+        <div id="gallery" class="relative w-full mt-4 md:hidden px-10 z-0" data-carousel="slide">
             <!-- Carousel wrapper -->
             <div class="relative h-72 overflow-hidden rounded-lg md:h-96">
                 <!-- Item 1 -->
@@ -282,10 +280,10 @@
                 </p>
             </div>
         
-            <div id="service-card-3" class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
+            <div id="service-card-3" class="md:hidden lg:flex service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/repair.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
-                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Repair Works</h1>
-                <p class="text-center text-sm lg:text-base text-accent font-ballo">
+                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora md:text-lg">Repair Works</h1>
+                <p class="text-center text-sm lg:text-base text-accent font-ballo md:text-lg">
                     Small damages can lead to bigger problems if ignored. We provide quick and reliable repair services for fans, bulbs, fixtures, and more.
                 </p>
             </div>
@@ -295,48 +293,48 @@
         <div id="more-cards" class="hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center mt-5">
             <div class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/carpenter.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
-                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Carpenter</h1>
-                <p class="text-center text-sm lg:text-base text-accent font-ballo">
+                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora md:text-lg ">Carpenter</h1>
+                <p class="text-center text-sm lg:text-base text-accent font-ballo md:text-lg ">
                     From fixing broken furniture to custom woodwork, our skilled carpenters bring precision and quality to every project.
                 </p>
             </div>
         
             <div class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/electrical.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
-                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Electrics</h1>
-                <p class="text-center text-sm lg:text-base font-ballo text-accent">
+                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora md:text-lg ">Electrics</h1>
+                <p class="text-center text-sm lg:text-base font-ballo text-accent md:text-lg ">
                     Electrical issues can be dangerous if left unchecked. Our expert electricians handle installations, repairs, and maintenance.
                 </p>
             </div>
         
             <div class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/refurbishment.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
-                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Refurbishment</h1>
-                <p class="text-center text-sm lg:text-base text-accent font-ballo">
+                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora md:text-lg ">Refurbishment</h1>
+                <p class="text-center text-sm lg:text-base text-accent font-ballo md:text-lg ">
                     Whether it’s a minor touch-up or a full renovation, our refurbishment services help transform your property into something fresh and modern.
                 </p>
             </div>
         
             <div class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/construction_icon.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
-                <h1 class="text-dark text-2xl lg:text-[20px] font-bold font-lora">New and Re-Constructions</h1>
-                <p class="text-center text-sm lg:text-base text-accent font-ballo">
+                <h1 class="text-dark text-2xl lg:text-[20px] font-bold font-lora md:text-lg ">New and Re-Constructions</h1>
+                <p class="text-center text-sm lg:text-base text-accent font-ballo md:text-lg ">
                     Building your dream space from the ground up? Our New and Re-Constructions services offer expert planning, quality craftsmanship, and modern design solutions to bring your vision to life.
                 </p>
             </div>
         
             <div class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/landSales_icon.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
-                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Land Sales</h1>
-                <p class="text-center text-sm lg:text-base font-ballo text-accent">
+                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora md:text-lg ">Land Sales</h1>
+                <p class="text-center text-sm lg:text-base font-ballo text-accent md:text-lg ">
                     Looking to buy or sell land? Our Land Sales services connect you with prime properties and trusted buyers, ensuring smooth transactions.
                 </p>
             </div>
         
             <div class="service-card flex flex-col items-center w-full max-w-[360px] h-auto p-6 space-y-3 shadow-lg bg-white rounded-lg">
                 <img src="./static/image/securtiy_icon.svg" class="w-20 h-20 lg:w-[120px] lg:h-[120px]">
-                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora">Security, Key-holder</h1>
-                <p class="text-center text-sm lg:text-base text-accent font-ballo">
+                <h1 class="text-dark text-2xl lg:text-[30px] font-bold font-lora md:text-lg ">Security, Key-holder</h1>
+                <p class="text-center text-sm lg:text-base text-accent font-ballo md:text-lg ">
                     Ensure the safety and accessibility of your property with our reliable Security and Key-holder services.
                 </p>
             </div>
@@ -357,8 +355,6 @@
     <!-- before / after section -->
     <h1 class="text-center text-accent text-[40px] font-bold font-lora lg:text-[60px]">Gallery</h1>
 
-
-    
     <section class="grid mt-3 grid-cols-1 md:grid-cols-3 gap-6 px-7 justify-center z-10">
         <!-- Card 1 -->
         <div class="container">
@@ -374,7 +370,7 @@
             <!-- Slider -->
             <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
             <div class="slider-line" aria-hidden="true"></div>
-                <div class="slider-button" aria-hidden="true">
+            <div class="slider-button" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
                     <rect width="256" height="256" fill="none"></rect>
                     <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
@@ -383,39 +379,37 @@
                     <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
                     <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
                 </svg>
-                </div>
+            </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="container">
+            <div class="image-container relative">
+              <img class="image-before slider-image" src="./static/image/before_after/b2.jpg" alt="color photo"/>
+              <img class="image-after slider-image" src="./static/image/before_after/a2.jpg" alt="black and white"/>
+          
+              <!-- Before and After Text -->
+              <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
+              <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
             </div>
           
-            <!-- card-2 -->
-
-            <div class="container">
-                <div class="image-container relative">
-                  <img class="image-before slider-image" src="./static/image/before_after/b2.jpg" alt="color photo"/>
-                  <img class="image-after slider-image" src="./static/image/before_after/a2.jpg" alt="black and white"/>
-              
-                  <!-- Before and After Text -->
-                  <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
-                  <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
-                </div>
-              
-                <!-- Slider -->
-                <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
-                <div class="slider-line" aria-hidden="true"></div>
-                    <div class="slider-button" aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
-                        <rect width="256" height="256" fill="none"></rect>
-                        <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                        <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                        <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                    </svg>
-                    </div>
-                </div>
-
-                <!-- card-3 -->
-
-          <div class="container">
+            <!-- Slider -->
+            <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
+            <div class="slider-line" aria-hidden="true"></div>
+            <div class="slider-button" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                    <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                </svg>
+            </div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="container">
             <div class="image-container relative">
               <img class="image-before slider-image" src="./static/image/before_after/b3.jpg" alt="color photo"/>
               <img class="image-after slider-image" src="./static/image/before_after/a3.jpg" alt="black and white"/>
@@ -428,7 +422,7 @@
             <!-- Slider -->
             <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider"/>
             <div class="slider-line" aria-hidden="true"></div>
-                <div class="slider-button" aria-hidden="true">
+            <div class="slider-button" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
                     <rect width="256" height="256" fill="none"></rect>
                     <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
@@ -437,53 +431,90 @@
                     <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
                     <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
                 </svg>
+            </div>
+        </div>
+    </section>
+    
+    <section class="grid grid-cols-3 gap-6 z-10 justify-center px-6">
+        <div id="more_after" class="hidden md:grid-cols-3 grid-cols-3 col-span-3 gap-6 mt-5">
+            <!-- Card 4 -->
+            <div class="container">
+                <div class="image-container relative">
+                  <img class="image-before slider-image" src="./static/image/before_after/b4.jpg" alt="color photo"/>
+                  <img class="image-after slider-image" src="./static/image/before_after/a4.jpg" alt="black and white"/>
+                  <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
+                  <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
+                </div>
+                <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider w-full mt-2"/>
+                <div class="slider-line" aria-hidden="true"></div>
+                <div class="slider-button" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                        <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                    </svg>
                 </div>
             </div>
-          </div>
-    </section>
-
-    <section class="grid mt-3 grid-cols-1 md:grid-cols-3 gap-6 px-7 justify-center z-10">
-        <div id="more_after" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center mt-5">
-          <!-- Card 4 -->
-          <div class="container">
-            <div class="image-container relative">
-              <img class="image-before slider-image" src="./static/image/before_after/b4.jpg" alt="color photo"/>
-              <img class="image-after slider-image" src="./static/image/before_after/a4.jpg" alt="black and white"/>
-              <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
-              <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
-            </div>
-            <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider w-full mt-2"/>
-          </div>
     
-          <!-- Card 5 -->
-          <div class="container">
-            <div class="image-container relative">
-              <img class="image-before slider-image" src="./static/image/before_after/b5.jpg" alt="color photo"/>
-              <img class="image-after slider-image" src="./static/image/before_after/a5.jpg" alt="black and white"/>
-              <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
-              <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
+            <!-- Card 5 -->
+            <div class="container">
+                <div class="image-container relative">
+                  <img class="image-before slider-image" src="./static/image/before_after/b5.jpg" alt="color photo"/>
+                  <img class="image-after slider-image" src="./static/image/before_after/a5.jpg" alt="black and white"/>
+                  <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
+                  <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
+                </div>
+                <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider w-full mt-2"/>
+                <div class="slider-line" aria-hidden="true"></div>
+                <div class="slider-button" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                        <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                    </svg>
+                </div>
             </div>
-            <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider w-full mt-2"/>
-          </div>
     
-          <!-- Card 6 -->
-          <div class="container">
-            <div class="image-container relative">
-              <img class="image-before slider-image" src="./static/image/before_after/b6.jpg" alt="color photo"/>
-              <img class="image-after slider-image" src="./static/image/before_after/a6.jpg" alt="black and white"/>
-              <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
-              <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
+            <!-- Card 6 -->
+            <div class="container">
+                <div class="image-container relative">
+                  <img class="image-before slider-image" src="./static/image/before_after/b6.jpg" alt="color photo"/>
+                  <img class="image-after slider-image" src="./static/image/before_after/a6.jpg" alt="black and white"/>
+                  <span class="before-text absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">Before</span>
+                  <span class="after-text absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl font-bold">After</span>
+                </div>
+                <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider w-full mt-2"/>
+                <div class="slider-line" aria-hidden="true"></div>
+                <div class="slider-button" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                        <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                    </svg>
+                </div>
             </div>
-            <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider w-full mt-2"/>
-          </div>
         </div>
     
-        <div class="flex justify-center mt-6">
-          <button id="show-more-after-btn" class="font-ballo px-6 py-3 text-accent rounded-full duration-300 ease-in-out text-lg shadow-md hover:bg-accent hover:text-white hover:scale-105">
+    </section>
+    <div class=" mt-6 flex justify-center items-center">
+        <button id="show-more-after-btn" class="font-ballo px-6 py-3 text-accent rounded-full duration-300 ease-in-out text-lg shadow-md hover:bg-accent hover:text-white hover:scale-105">
             More Images
-          </button>
-        </div>
-    </section>
+        </button>
+    </div>
+
+
+
+    
+        
         
     
 
@@ -503,7 +534,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
               <ul class="space-y-2">
                 <li class="font-bold text-lg">Contact Us</li>
-                <li class="opacity-90">Sri Lanka : +94 77 122 1356</li>
+                <li class="opacity-90">Sri Lanka : +94 77 822 6826</li>
                 <li class="opacity-90">Germany : +49 176 23668259</li>
                 <li class="opacity-90">UK : +44 7877 233 699</li>
                 <li>
@@ -512,12 +543,16 @@
                   </a>
                 </li>
               </ul>
-              <ul class="space-y-2">
+              <ul class="space-y-2 inline">
                 <li class="font-bold text-lg">Location</li>
                 <li class="opacity-80 text-lg">Jaffna, Sri Lanka</li>
+                <div class="hidden lg:block">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.831532877893!2d80.0622832!3d9.7736304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3affaadb83c05e79%3A0x9d30c6bb26fae8ab!2z4K6V4K-B4K6w4K-B4K6u4K-N4K6q4K6a4K6_4K6f4K-N4K6f4K6_IOCuheCuruCvjeCuruCuqeCvjSDgrpXgr4vgrrXgrr_grrLgr40gfCBLdXJ1bXBhc2lkZHkgQW1tYW4gS292aWw!5e1!3m2!1sen!2sin!4v1740405380438!5m2!1sen!2sin" width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
               </ul>
             </div>
           </div>
+
       
           <!-- Right Section -->
           <div class="flex flex-col items-center lg:items-end space-y-5 font-ballo lg:text-lg">
@@ -533,7 +568,7 @@
              <div class="hidden lg:block lg:flex-grow"></div>
             <p class="text-lg lg:text-xl font-ballo font-semibold tracking-wide">Follow Us</p>
             <div id="social-icons" class="flex gap-4 justify-center lg:justify-end">
-              <img src="./static/image/whatsapp.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer">
+              <img src="./static/image/whatsapp.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer" onclick="openWhatsApp()">
               <img src="./static/image/facebook.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer">
               <img src="./static/image/insta.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer">
               <img src="./static/image/tikTok_icon.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer">

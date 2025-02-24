@@ -6,6 +6,17 @@ menuBtn.addEventListener("click", () => {
 });
 
 
+
+
+function openWhatsApp() {
+    const phoneNumber = '+447877233699'; // Replace with your phone number in international format, e.g., '919876543210'
+    const message = 'Hello!'; // Optional predefined message
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+}
+
+
+
 // Script for Toggle More Cards on Mobile 
 
 document.getElementById("show-more-btn").addEventListener("click", function () {
