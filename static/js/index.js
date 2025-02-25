@@ -5,6 +5,17 @@ menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
 });
 
+function hidden_nav(){
+  const mobilenav=document.getElementById("mobile-menu")
+  console.log("Hello");
+  mobilenav.classList.toggle("hidden")
+}
+
+
+
+
+
+
 
 
 
