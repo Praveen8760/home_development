@@ -869,10 +869,6 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -997,11 +993,6 @@ video {
 .bg-accent {
   --tw-bg-opacity: 1;
   background-color: rgb(40 42 54 / var(--tw-bg-opacity, 1));
-}
-
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
 }
 
 .bg-white {
@@ -1164,9 +1155,8 @@ video {
   line-height: 1rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-\[28px\] {
+  font-size: 28px;
 }
 
 .font-bold {
@@ -1205,6 +1195,10 @@ video {
   letter-spacing: 0.1em;
 }
 
+.text-\[28x\] {
+  color: 28x;
+}
+
 .text-accent {
   --tw-text-opacity: 1;
   color: rgb(40 42 54 / var(--tw-text-opacity, 1));
@@ -1228,11 +1222,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-primary {
-  --tw-text-opacity: 1;
-  color: rgb(136 20 21 / var(--tw-text-opacity, 1));
 }
 
 .opacity-0 {
@@ -1358,16 +1347,6 @@ video {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
-}
-
-.focus\:bg-white:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.focus\:text-dark:focus {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
 .focus\:outline-none:focus {
