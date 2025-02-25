@@ -18,10 +18,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <!-- javaScript import -->
     <script src="./static/js/animation.js" defer></script>
     <script src="./static/js/index.js" defer></script>
+
+
+
 
     
 </head>
@@ -29,59 +32,59 @@
 
 <body class="bg-white overflow-x-hidden">
     
-    
+  
     <!-- Navbar -->
-    <nav id="navbar" class="w-full px-6 py-4 lg:pr-0 z-20 fixed top-0 lg:absolute lg:bg-transparent bg-white shadow-md lg:shadow-none opacity-0 translate-y-[-50px]">
-        <div class="flex items-center justify-between">
-            <!-- Logo -->
-            <div>
-                <img src="./static/image/logo.svg" alt="Logo" class="h-8 lg:h-12">
-            </div>
-    
-            <!-- Desktop Navigation -->
-            <div class="font-semibold hidden font-ballo tracking-widest lg:flex space-x-8 text-dark lg:text-white uppercase absolute left-1/2 transform -translate-x-1/2">
-                <a href="#" class="hover:text-gray-300 nav-link">Home</a>
-                <a href="#services-section" class="hover:text-gray-300 nav-link">Services</a>
-                <a href="#latest-projects" class="hover:text-gray-300 nav-link">Projects</a>
-                <a href="#gallery_section" class="hover:text-gray-300 nav-link">Gallery</a>
-            </div>
-    
-            <!-- Contact Button (Only for Desktop) -->
-            <div class="hidden lg:flex ml-auto items-center space-x-5 mr-3">
-                <button class="font-semibold font-ballo text-white px-[26px] py-[12px] rounded-[160px] bg-accent focus:outline-none" onclick="openWhatsApp()">
-                    Contact Us Now
-                </button>
-                <div class="bg-accent rounded-full w-12 h-12 flex items-center justify-center text-white text-lg p-3" onclick="openWhatsApp()">
-                    <img src="./static/image/whatsapp_icon.svg" alt="" class="w-full h-full object-contain">
+        <nav id="navbar" class="w-full px-6 py-4 lg:pr-0 z-20 fixed top-0 lg:absolute lg:bg-transparent bg-white shadow-md lg:shadow-none opacity-0 translate-y-[-50px]">
+            <div class="flex items-center justify-between">
+                
+                <div>
+                    <img src="./static/image/logo.svg" alt="Logo" class="h-8 lg:h-12">
                 </div>
+        
+                
+                <div class="font-semibold hidden font-ballo tracking-widest lg:flex space-x-8 text-dark lg:text-white uppercase absolute left-1/2 transform -translate-x-1/2">
+                    <a href="#" class="hover:text-gray-300 nav-link">Home</a>
+                    <a href="#services-section" class="hover:text-gray-300 nav-link">Services</a>
+                    <a href="#latest-projects" class="hover:text-gray-300 nav-link">Projects</a>
+                    <a href="#gallery_section" class="hover:text-gray-300 nav-link">Gallery</a>
+                </div>
+        
+                
+                <div class="hidden lg:flex ml-auto items-center space-x-5 mr-3">
+                    <button class="font-semibold font-ballo text-white px-[26px] py-[12px] rounded-[160px] bg-accent focus:outline-none" onclick="openWhatsApp()">
+                        Contact Us Now
+                    </button>
+                    <div class="bg-accent rounded-full w-12 h-12 flex items-center justify-center text-white text-lg p-3" onclick="openWhatsApp()">
+                        <img src="./static/image/whatsapp_icon.svg" alt="" class="w-full h-full object-contain">
+                    </div>
+                </div>
+        
+                
+                <button id="menu-btn" class="lg:hidden text-dark focus:outline-primary">
+                    <svg class="w-8 h-8" fill="none" stroke="#282A36" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
             </div>
-    
-            <!-- Mobile/Tablet Menu Button -->
-            <button id="menu-btn" class="lg:hidden text-dark focus:outline-primary">
-                <svg class="w-8 h-8" fill="none" stroke="#282A36" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </div>
-    
-        <!-- Mobile/Tablet Collapsible Menu -->
-        <div id="mobile-menu" class="hidden flex-col items-center space-y-4 py-6 text-accent lg:hidden w-full rounded-lg transition-all duration-300 opacity-0 scale-95 z-50">
-            <ul class="flex mt-2 flex-col justify-center items-center rounded-lg space-y-4 w-full">
-                <li class="w-1/2 text-center border-b-2 hover:border-primary">
-                    <a href="#navbar" class="nav-link block w-full py-2 text-lg font-medium hover:text-dark transition duration-300 rounded-md hover:scale-110">Home</a>
-                </li>
-                <li class="w-1/2 text-center border-b-2 hover:border-primary">
-                    <a href="#services-section" class="nav-link block w-full py-2 text-lg font-medium hover:text-dark transition duration-300 rounded-md hover:scale-110">Services</a>
-                </li>
-                <li class="w-1/2 text-center border-b-2 hover:border-primary">
-                    <a href="#latest-projects" class="nav-link block w-full py-2 text-lg font-medium hover:text-dark transition duration-300 rounded-md hover:scale-110">Projects</a>
-                </li>
-                <li class="w-1/2 text-center">
-                    <a href="#gallery_section" class="nav-link block w-full py-2 text-lg font-medium hover:text-dark transition duration-300 rounded-md hover:scale-110">Gallery</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        
+            
+            <div id="mobile-menu" class="hidden flex-col items-center space-y-4 py-6 text-accent w-full rounded-lg transition-all duration-300 z-50 lg:hidden">
+                <ul class="flex mt-2 flex-col justify-center items-center rounded-lg space-y-4 w-full">
+                    <li class="w-1/2 text-center border-b-2 hover:border-primary">
+                        <a href="#navbar" class="nav-link-sm block w-full py-2 text-lg font-medium hover:text-dark transition duration-300 rounded-md hover:scale-110">Home</a>
+                    </li>
+                    <li class="w-1/2 text-center border-b-2 hover:border-primary">
+                        <a href="#services-section" class="nav-link-sm block w-full py-2 text-lg font-medium hover:text-dark transition duration-300 rounded-md hover:scale-110">Services</a>
+                    </li>
+                    <li class="w-1/2 text-center border-b-2 hover:border-primary">
+                        <a href="#latest-projects" class="nav-link-sm block w-full py-2 text-lg font-medium hover:text-dark transition duration-300 rounded-md hover:scale-110">Projects</a>
+                    </li>
+                    <li class="w-1/2 text-center">
+                        <a href="#gallery_section" class="nav-link-sm block w-full py-2 text-lg font-medium hover:text-dark transition duration-300 rounded-md hover:scale-110">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     
     <!-- Section (Image Moves Down in Mobile/Tablet) -->
     <section id="hero-section" class="relative w-full mt-[60px] lg:mt-0 opacity-0">
@@ -91,17 +94,17 @@
     
         <!-- Wrapper to match image height -->
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-            <h1 class="font-ballo text-[28px] md:text-[46px] font-bold lg:text-[60px] opacity-0 translate-y-10" id="head1">
-                Turning Maintenance into Magic
+            <h1 class="font-ballo text-[22px] md:text-[46px] font-bold lg:text-[50px] opacity-0 translate-y-10" id="head1">
+                German Quality Property Management in Jaffna
             </h1>
-            <p class="font-molengo lg:text-xl md:text-2xl lg:mt-4 lg:text-[36px] opacity-0 scale-90">
+            <p class="font-molengo text-xl md:text-2xl lg:mt-4 lg:text-[40px] opacity-0 scale-90">
                 Reliable, Effortless, Exceptional!
             </p>
         </div>
     </section>
     
     
-
+<!-- 
     <section id="stats-section" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 py-8 lg:px-12 lg:mt-5 font-montserrat opacity-0">
         <div class="stats-card flex flex-col items-center text-center shadow-lg bg-white p-6 rounded-xl w-full max-w-xs mx-auto">
             <img src="./static/image/hand.svg" class="stats-icon w-14 h-14 mb-3">
@@ -126,7 +129,7 @@
             <p class="stats-number text-xl font-bold text-gray-800 lg:text-2xl" data-value="100">0%</p>
             <p class="text-gray-600 text-sm">Professionalism</p>
         </div>
-    </section>
+    </section> -->
     
     
     
@@ -569,9 +572,9 @@
             <p class="text-lg lg:text-xl font-ballo font-semibold tracking-wide">Follow Us</p>
             <div id="social-icons" class="flex gap-4 justify-center lg:justify-end">
               <img src="./static/image/whatsapp.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer" onclick="openWhatsApp()">
-              <img src="./static/image/facebook.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer">
-              <img src="./static/image/insta.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer">
-              <img src="./static/image/tikTok_icon.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer">
+              <!-- <img src="./static/image/facebook.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer">
+              <img src="./static/image/insta.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer"> -->
+              <a href="https://www.tiktok.com/@js.daughters?_t=ZN-8uD1K75BFcE&_r=1" target="_blank"><img src="./static/image/tikTok_icon.svg" class="w-10 h-10 lg:w-12 lg:h-12 hover:scale-110 transition-transform cursor-pointer"></a>
             </div>
           </div>
         </div>
@@ -581,6 +584,9 @@
           © 2025 JS & Daughters Property Management. All Rights Reserved.
         </div>
     </footer>
+
+
+
       
 </body>
 </html>

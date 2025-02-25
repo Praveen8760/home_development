@@ -13,20 +13,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Mobile Menu Toggle
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-    let menuOpen = false;
+    
+    // const menuBtn = document.getElementById("menu-btn");
+    // const mobileMenu = document.getElementById("mobile-menu");
+    // let menuOpen = false;
 
-    menuBtn.addEventListener("click", function () {
-        menuOpen = !menuOpen;
-        gsap.to(mobileMenu, {
-            opacity: menuOpen ? 1 : 0,
-            scale: menuOpen ? 1 : 0.95,
-            display: menuOpen ? "flex" : "none",
-            duration: 0.5,
-            ease: "power2.out"
-        });
-    });
+    // menuBtn.addEventListener("click", function () {
+    //     menuOpen = !menuOpen;
+    //     gsap.to(mobileMenu, {
+    //         opacity: menuOpen ? 1 : 0,
+    //         scale: menuOpen ? 1 : 0.95,
+    //         display: menuOpen ? "flex" : "none",
+    //         duration: 0.5,
+    //         ease: "power2.out"
+    //     });
+    // });
 
     // Hero Section Animation
     function animateHeroSection() {

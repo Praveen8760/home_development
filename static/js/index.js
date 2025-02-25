@@ -1,21 +1,28 @@
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
+const mobileMenu = document.getElementById('mobile-menu');
+const menuBtn = document.getElementById('menu-btn');
+const mobileLinks = document.querySelectorAll('.nav-link-sm');
 
-menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
+// Toggle mobile menu on button click
+menuBtn.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('flex');
+    } else {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+    }
+    console.log('Menu classes after toggle:', mobileMenu.classList.value);
 });
 
-function hidden_nav(){
-  const mobilenav=document.getElementById("mobile-menu")
-  console.log("Hello");
-  mobilenav.classList.toggle("hidden")
-}
-
-
-
-
-
-
+// Close mobile menu when a link is clicked
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (mobileMenu.classList.contains('flex')) {
+            mobileMenu.classList.remove('flex');
+            mobileMenu.classList.add('hidden');
+        }
+    });
+});
 
 
 
@@ -25,7 +32,6 @@ function openWhatsApp() {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
 }
-
 
 
 // Script for Toggle More Cards on Mobile 
